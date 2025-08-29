@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - Shrava's World</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+     h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #008B8B;
+}
+  body,
+    h1, h2, h3, h4, h5, h6,
+    p,
+    a,
+    ul, ol, li,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: 'Playfair Display', serif;
+    }
+    main {
+      flex: 1;
+    }
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+    .card-img-top {
+     height:100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div data-include="components/navbar.html"></div>
+
+ <!-- Product Section -->
+ <main>
+    <div class="container my-5"data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="mb-4 text-center fw-bold" >Our Products</h2>
+      <div class="row" id="product-list">
+        
+        <!-- Product 1 -->
+      <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/CowGhee.jpg" class="card-img-top" alt="Cow Ghee" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Cow Ghee</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Cow Ghee"
+          data-main-img="assets/images/CowGhee.jpg"
+          
+          data-description="Benefits of A2 Ghee: 
+
+Helps in Digestion:
+
+A2 Ghee is beneficial for the intestines and aids in digestion, which reduces problems like constipation and acidity. 
+
+Boosts Immunity:
+
+The nutrients present in A2 Ghee help in boosting immunity, which enables the body to fight various diseases. 
+
+Beneficial for Bones:
+
+A2 Ghee is a rich source of Vitamin K2, which helps in calcium absorption and improves bone health. 
+
+Good for Heart:
+
+The omega-3 and omega-9 fatty acids present in A2 Ghee are considered good for the heart.  This reduces the risk of heart diseases. 
+
+Beneficial for Skin:
+
+A2 Ghee moisturizes and nourishes the skin, making it look radiant and healthy. 
+
+Energizes the Body:
+
+A2 Ghee energizes the body and helps in reducing fatigue, making you feel energetic throughout the day. 
+
+ Helps in weight loss naturally:
+
+The fatty acids present in A2 ghee improve metabolism, which helps in weight loss.
+
+How to use A2 ghee:
+
+You can include A2 ghee in your diet in various ways, such as adding it to rice, pol, dal, or vegetables.
+
+You can take one spoon of it in the morning on an empty stomach.
+
+A2 ghee can be used in vegetables, parathas, and other dishes.
+
+A2 ghee is also used to moisturize the skin and for massage.">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Cow Ghee">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Product 2 -->
+       <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/CowDungCakes/CowDungCake2.jpg" class="card-img-top" alt="Hydraulic Valve" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Cow Dung Cakes</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Cow Dung Cakes"
+          data-main-img="assets/images/CowDungCakes/CowDungCake2.jpg"
+          data-images='["assets/images/CowDungCakes/CowDungCakes.jpg", "assets/images/product2.jpeg"]'
+          data-description="Benefits of Cow Dung Cakes:
+
+Natural Fertilizer for Plants:
+Cow dung is rich in organic matter and essential nutrients like nitrogen, phosphorus, and potassium. It improves soil fertility and supports sustainable agriculture.
+
+Eco-Friendly Fuel:
+Used as a traditional and eco-friendly source of fuel in rural areas for cooking and heating. It emits less pollution compared to wood or coal.
+
+Purifies the Environment:
+When burned, cow dung releases natural compounds that are believed to purify the air and repel insects.
+
+Used in Religious Rituals:
+Cow dung cakes are commonly used in yajnas, havans, and other religious ceremonies due to their sacred and purifying nature.
+
+Insect Repellent and Disinfectant:
+The antimicrobial properties of cow dung help in repelling insects and pests. It is also used to coat walls and floors in traditional homes to maintain hygiene.
+
+Sustainable Composting:
+Cow dung aids in composting by accelerating the breakdown of organic waste, making it an excellent component for organic farming.
+
+Cost-Effective and Renewable:
+It is a renewable, low-cost source of energy that reduces the reliance on non-renewable fuels.
+
+How to use Cow Dung Cakes:
+
+They can be directly used for havans and puja rituals by lighting them.
+
+Crushed cakes can be added to compost or mixed in soil for plant nourishment.
+
+Can be used as fuel in traditional mud stoves (chulhas) for cooking.
+
+Ideal for organic farming, gardening, and religious use."">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Cow Dung Cakes">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Product: Grapes -->
+<div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/Grapes/grapes1.jpg" class="card-img-top" alt="Grapes" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Grapes</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Grapes"
+          data-main-img="assets/images/Grapes/grapes1.jpg"
+          data-images='["assets/images/Grapes/grapes.jpg", "assets/images/Grapes/grapes2.jpg"]'
+          data-description="Benefits of Grapes:
+
+Rich in Nutrients:
+Packed with vitamins C and K, grapes provide antioxidants that help improve immunity and maintain healthy skin.
+
+Supports Heart Health:
+The antioxidants in grapes help reduce cholesterol levels and improve blood circulation.
+
+Hydration and Energy:
+Grapes are high in water content and natural sugars, making them a refreshing and energy-boosting fruit.
+
+Improves Digestion:
+Their fiber content supports better digestion and gut health.
+
+How to use Grapes:
+Eat fresh as a snack, use in fruit salads, desserts, juices, or as a topping for yogurt and cereals.">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Grapes">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product: Cucumber -->
+<div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/Cucumber/cucumber.jpg" class="card-img-top" alt="Cucumber" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Cucumber</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Cucumber"
+          data-main-img="assets/images/Cucumber/cucumber.jpg"
+          data-images='["assets/images/Cucumber/cucumber1.jpg"]'
+          data-description="Benefits of Cucumber:
+
+Hydration:
+Cucumber is 95% water, making it excellent for hydration.
+
+Skin Health:
+It cools the body, reduces puffiness, and is often used in skincare.
+
+Rich in Nutrients:
+Contains vitamin K, potassium, and antioxidants for overall health.
+
+Aids Digestion:
+Its fiber content helps regulate digestion and prevent constipation.
+
+How to use Cucumber:
+Eat raw in salads, sandwiches, or juices. Use in skincare for cooling and refreshing effects.">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Cucumber">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product: Peanuts -->
+<div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/Peanuts/peanuts.jpg" class="card-img-top" alt="Peanuts" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Peanuts</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Peanuts"
+          data-main-img="assets/images/Peanuts/peanuts.jpg"
+          data-images='["assets/images/Peanuts/peanuts1.jpg"]'
+          data-description="Benefits of Peanuts:
+
+Rich in Protein:
+A great source of plant-based protein for energy and muscle health.
+
+Heart Health:
+Contain healthy fats that help lower cholesterol and reduce the risk of heart disease.
+
+Nutrient Dense:
+Packed with magnesium, vitamin E, and antioxidants.
+
+Weight Management:
+Promotes satiety and reduces unnecessary snacking.
+
+How to use Peanuts:
+Eat raw, roasted, or as peanut butter. Use in snacks, sweets, salads, and cooking.">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Peanuts">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product: Basmati Rice -->
+<div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/BasmatiRice/basmati.jpg" class="card-img-top" alt="Basmati Rice" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Basmati Rice</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Basmati Rice"
+          data-main-img="assets/images/BasmatiRice/basmati.jpg"
+          data-images='["assets/images/BasmatiRice/basmati1.jpg"]'
+          data-description="Benefits of Basmati Rice:
+
+Rich Aroma & Flavor:
+Known for its natural fragrance and long grains.
+
+Healthy Carbohydrates:
+Provides sustained energy with low to medium glycemic index.
+
+Easy to Digest:
+Light on the stomach and suitable for daily meals.
+
+Nutritional Value:
+Contains vitamins, minerals, and is low in fat.
+
+How to use Basmati Rice:
+Cook for biryanis, pulao, fried rice, or daily meals. Ideal for festive dishes due to its rich aroma.">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Basmati Rice">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- Product 3 -->
+       <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/onion/onion.jpg" class="card-img-top" alt="Onion" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Onion</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Onion"
+          data-main-img="assets/images/onion/onion.jpg"
+          data-images='["assets/images/product3.jpg"]'
+          data-description="Benefits of Onion:
+
+Supports Heart Health:
+Onions contain antioxidants and compounds like quercetin that help in reducing cholesterol levels and lowering blood pressure, supporting overall heart health.
+
+Boosts Immunity:
+Rich in vitamin C and phytochemicals, onions help strengthen the immune system and fight off infections.
+
+Improves Digestion:
+Onions are a good source of dietary fiber, which aids in healthy digestion and prevents constipation.
+
+Regulates Blood Sugar:
+Onions contain compounds that can help regulate blood sugar levels, making them beneficial for people with diabetes when consumed in moderation.
+
+Anti-Inflammatory Properties:
+The sulfur compounds in onions have anti-inflammatory effects and may help reduce inflammation in the body.
+
+Rich in Antioxidants:
+Onions are loaded with antioxidants that help protect the body from free radical damage and oxidative stress.
+
+Promotes Healthy Skin and Hair:
+Onions are known to improve skin texture and promote hair growth due to their high sulfur content.
+
+How to use Onion:
+
+Can be consumed raw in salads or as a garnish for various dishes.
+
+Used in cooking for curries, gravies, stir-fries, soups, and sauces.
+
+Can be juiced or applied topically for hair and skin benefits.
+
+Can be pickled and preserved for long-term use.
+
+An essential ingredient in daily cooking and traditional home remedies.">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Onion">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Product 4 -->
+      <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/fig/Fig2.jpg" class="card-img-top" alt="Fig"/>
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Fig</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Fig"
+          data-main-img="assets/images/fig/Fig2.jpg"
+          data-images='["assets/images/fig/Fig3.jpg","assets/images/product41.png"]'
+          data-description="There are many benefits of eating Anjeer. It is good for digestion, good for the heart, good for bones, useful for blood purification, controlling diabetes, weight loss and good for the brain. 
+
+For digestion: Since figs are rich in fiber, it helps in improving digestion. It is also useful for problems like constipation and indigestion. 
+
+For heart: Since figs are rich in potassium and fiber, it is good for the heart. It helps in controlling blood pressure and reducing the risk of heart diseases. 
+
+For bones: Since figs are rich in calcium and phosphorus, it helps in keeping bones strong. 
+
+For blood purification and skin: Figs are useful in purifying the blood and making the skin glow. 
+
+For diabetes: The fiber present in figs helps in controlling blood sugar levels. 
+
+For weight loss: Since figs are low in calories and high in fiber, it helps in losing weight. 
+
+ For the brain: The antioxidants in figs are beneficial for the brain.
+
+Other benefits: Figs are also particularly beneficial for men, and are also useful for problems like cough and allergies">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Fig">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Product 5 -->
+       <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/greenchilli/greenchilli.jpg" class="card-img-top" alt="Green Chilli" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Green Chilli</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Green Chilli"
+          data-main-img="assets/images/greenchilli/greenchilli.jpg"
+          data-images='["assets/images/greenchilli/product51.jpg"]'
+          data-description="Benefits of Green Chilli:
+
+Rich in Vitamins:
+Green chillies are a great source of vitamin C, vitamin A, and vitamin B6 which support immunity, eye health, and overall metabolism.
+
+Boosts Immunity:
+The antioxidants and vitamin C in green chillies help strengthen the immune system and fight off infections.
+
+Improves Digestion:
+Green chillies stimulate the digestive system by increasing the secretion of digestive juices and enzymes.
+
+Supports Weight Loss:
+The capsaicin in green chillies helps in increasing metabolism, which can assist in burning calories and managing weight.
+
+Controls Blood Sugar:
+Green chillies have a low glycemic index and may help in managing blood sugar levels when included as part of a balanced diet.
+
+Good for Skin and Hair:
+Green chillies contain vitamin E which is good for healthy skin and promotes hair growth.
+
+Relieves Nasal Congestion:
+The heat from green chillies can help in clearing nasal congestion and improving airflow during colds or sinus issues.
+
+How to use Green Chilli:
+
+Can be used fresh in salads, chutneys, pickles, and garnishes.
+
+Used in cooking for flavoring curries, dals, stir-fried dishes, and rice preparations.
+
+Can be dried and powdered for long-term use as a spice.
+
+Used to make green chilli paste or infused oils for added heat in recipes">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Green Chilli">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Product 6 -->
+        <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100">
+    <img src="assets/images/pomo/pomo3.jpg" class="card-img-top" alt="Pomegranate" />
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Pomegranate</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <button class="btn btn-info view-details-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#detailsModal"
+          data-title="Pomegranate"
+          data-main-img="assets/images/pomo/pomo3.jpg"
+          data-images='[ "assets/images/pomo/pomo4.jpg", "assets/images/pomo/pomo5.jpg"]'
+          data-description="Benefits of Pomegranate:
+
+Rich in Antioxidants:
+Pomegranate is loaded with antioxidants like punicalagins and anthocyanins which help protect the body against free radical damage and oxidative stress.
+
+Boosts Heart Health:
+It may help reduce blood pressure, lower cholesterol levels, and improve overall heart function by keeping arteries flexible and reducing plaque buildup.
+
+Improves Hemoglobin Levels:
+Pomegranate is known to boost hemoglobin and is especially beneficial for people with low iron levels or anemia.
+
+Supports Digestion:
+Its fiber content helps improve digestion and prevents issues like constipation.
+
+Anti-Inflammatory Properties:
+The natural compounds in pomegranate help reduce inflammation in the body, which can benefit people with arthritis and other chronic conditions.
+
+Strengthens Immunity:
+Rich in vitamin C and other nutrients, pomegranate helps support a strong immune system and enhances resistance to infections.
+
+Promotes Healthy Skin:
+Pomegranate helps in maintaining glowing skin, reducing acne, and delaying signs of aging due to its antioxidant and anti-inflammatory properties.
+
+How to use Pomegranate:
+
+Can be consumed fresh by eating the seeds directly.
+
+Juice can be extracted and consumed as a refreshing and healthy drink.
+
+Can be added to fruit salads, desserts, smoothies, and yogurt.
+
+Used in cooking for garnishing curries, rice dishes, and salads.
+
+Ideal for daily consumption to improve overall health and vitality.">
+          View Details
+        </button>
+
+        <button class="btn btn-primary request-quote-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Pomegranate">
+          Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Modal -->
+ <!-- Modal --> 
+<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="quoteForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="quoteName" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="quoteName" name="name" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="quoteEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="quoteEmail" name="email" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="quoteContact" class="form-label">Contact Number</label>
+            <input type="tel" class="form-control" id="quoteContact" name="contact" pattern="[0-9]{10}" placeholder="Enter 10-digit number" required />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Product</label>
+            <input type="text" class="form-control" id="product_name" name="product" readonly />
+          </div>
+
+          <div class="mb-3">
+            <label for="quoteMessage" class="form-label">Message</label>
+            <textarea class="form-control" id="quoteMessage" name="message" rows="3"></textarea>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Send Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Product Details Modal --> 
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailsModalLabel">Product Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <h4 id="detailsTitle"></h4>
+
+        <div class="row align-items-start">
+          <!-- Left column: Main + Additional Images -->
+          <div class="col-md-4 text-center mb-3 mb-md-0 ">
+            <!-- Main Image -->
+            <img id="mainImage" src="" class="rounded mb-3" style="width: 200px; height: auto;" alt="Main Product" />
+            
+            <!-- Additional Images -->
+            <div class="d-flex gap-2 flex-wrap justify-content-center" id="additionalImages"></div>
+          </div>
+
+          <!-- Right column: Description -->
+          <div class="col-md-8">
+            <p id="detailsDescription" class="mb-0"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Modal Footer placed correctly -->
+      <!-- <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div> -->
+
+    </div>
+  </div>
+</div>
+
+<div data-include="components/sticky-social.html"></div>
+
+
+
+  <!-- Footer -->
+  <div data-include="components/footer.html"></div>
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/include.js"></script>
+  <script src="js/main.js"></script>
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Init EmailJS
+    emailjs.init("7rQD69_7mW6b7hR_v"); // Replace with your public key
+
+    // Set product name in modal
+    const quoteButtons = document.querySelectorAll(".request-quote-btn");
+    const productInput = document.getElementById("product_name");
+
+    quoteButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const product = this.getAttribute("data-product");
+        productInput.value = product;
+      });
+    });
+
+    // Handle form submit
+    const form = document.getElementById("quoteForm");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_4vh0zlm", "template_hqhhenl", this)
+        .then(() => {
+          alert("Quote request sent successfully!");
+          form.reset();
+          const modal = bootstrap.Modal.getInstance(document.getElementById("quoteModal"));
+          modal.hide();
+        }, (error) => {
+          alert("Failed to send request. Please try again.");
+          console.error(error);
+        });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // For View Details
+    const viewButtons = document.querySelectorAll(".view-details-btn");
+    const detailsTitle = document.getElementById("detailsTitle");
+    const detailsDescription = document.getElementById("detailsDescription");
+    const mainImage = document.getElementById("mainImage");
+    const additionalImagesContainer = document.getElementById("additionalImages");
+
+    viewButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const title = button.getAttribute("data-title");
+        const description = button.getAttribute("data-description");
+        const mainImg = button.getAttribute("data-main-img");
+        const images = JSON.parse(button.getAttribute("data-images") || "[]");
+
+        detailsTitle.textContent = title;
+       detailsDescription.innerHTML = description.replace(/\n/g, "<br>");
+
+        mainImage.src = mainImg;
+
+// Clear existing thumbnails
+additionalImagesContainer.innerHTML = "";
+
+// Add main image as the first thumbnail
+const mainThumbnail = document.createElement("img");
+mainThumbnail.src = mainImg;
+mainThumbnail.className = "img-thumbnail";
+mainThumbnail.style.width = "60px";
+mainThumbnail.style.height = "60px";
+mainThumbnail.style.objectFit = "cover";
+mainThumbnail.style.cursor = "pointer";
+additionalImagesContainer.appendChild(mainThumbnail);
+
+// Add the rest of the images (skip if duplicate of main)
+images.forEach(imgSrc => {
+  if (imgSrc !== mainImg) {
+    const img = document.createElement("img");
+    img.src = imgSrc;
+    img.className = "img-thumbnail";
+    img.style.width = "60px";
+    img.style.height = "60px";
+    img.style.objectFit = "cover";
+    img.style.cursor = "pointer";
+    additionalImagesContainer.appendChild(img);
+  }
+});
+
+
+      });
+    });
+  });
+</script>
+<script>
+  // Add thumbnail click handler to update the main image
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("additionalImages").addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        document.getElementById("mainImage").src = e.target.src;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

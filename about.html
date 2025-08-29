@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Shrava's World | Organic & Farm-Fresh Products</title>
+  
+  <!-- Meta Tags -->
+  <meta name="title" content="About Us - Shrava's World | Organic & Farm-Fresh Products">
+  <meta name="description" content="Discover Shrava's World’s dedication to delivering natural and farm-fresh products like Cow Ghee, Cow Dung Fertilizer, Onion, Fig, Green Chilli, and Pomegranate.">
+  <meta name="keywords" content="cow ghee, cow dung cakes, organic fertilizer, fresh onion, fig, green chilli, pomegranate, farm products, organic food, natural products">
+  <meta name="author" content="Shrava's World">
+
+  <!-- Social Sharing Meta -->
+  <meta property="og:title" content="About Us - Shrava's World">
+  <meta property="og:description" content="Learn how Shrava's World delivers high-quality farm and organic products directly from trusted sources.">
+  <meta property="og:image" content="https://yourdomain.com/images/about-banner.jpg">
+  <meta property="og:url" content="https://yourdomain.com/about.html">
+  <meta property="og:site_name" content="Shrava's World">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS for Transition -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+       /* font-family: 'Nunito', sans-serif; */
+      background-color: #f9f9f9;
+    }
+
+    main {
+      flex: 1;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    main.reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #008B8B;
+}
+  body,
+    h1, h2, h3, h4, h5, h6,
+    p,
+    a,
+    ul, ol, li,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .lead {
+      color: #D4A017;
+    }
+
+    /* .btn-success {
+      background-color: #25D366;
+      
+    } */
+
+    
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div data-include="components/navbar.html"></div>
+
+  <!-- Main Content -->
+  <main id="about-main">
+    <section class="container my-5">
+      <header>
+        <h2 style="font-weight: bold;">About Us</h2>
+      </header>
+      <article>
+        <p>
+  At <strong>Shrava's World</strong>, we are passionate about bringing nature’s best to your doorstep. From nourishing <strong>Cow Ghee</strong> and traditional <strong>Cow Dung Cakes</strong> to fresh produce like <strong>Onions, Grapes, Cucumbers, Peanuts, Basmati Rice, Sweet Figs, Spicy Green Chillies,</strong> and <strong>Juicy Pomegranates</strong> – we deliver farm-fresh products with a commitment to purity and quality.
+</p>
+
+        <p>
+          With a focus on organic farming and eco-friendly practices, we partner directly with farmers to ensure that every product you receive is natural, safe, and grown with care. Our goal is to promote healthy living through authentic agricultural offerings.
+        </p>
+        <p>
+          Whether you're a household looking for natural ghee or a business sourcing premium vegetables and fruits, Shrava's World is your trusted supplier.
+        </p>
+      </article>
+    </section>
+
+    <section class="container text-center my-5">
+      <h2>Welcome to Shrava's World</h2>
+      <p class="lead">Pure. Fresh. Naturally Yours.</p>
+      <a href="products.html" class="btn btn-success">Browse Our Products</a>
+    </section>
+  </main>
+  <div data-include="components/sticky-social.html"></div>
+
+  <!-- Footer -->
+  <div data-include="components/footer.html"></div>
+
+  <!-- Scripts -->
+  <script src="js/include.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Reveal Animation Script -->
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('about-main').classList.add('reveal');
+    });
+  </script>
+</body>
+</html>
