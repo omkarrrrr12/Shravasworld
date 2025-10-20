@@ -8,7 +8,7 @@
   <title>Shrava's World (Shrava's Global Business Enterprises) | Organic Products</title>
 
   <!-- Meta Description -->
-  <meta name="description" content="Shrava's World (Shrava's Global Business Enterprises) - Premium Organic Products: Cow Ghee, Grapes, Cucumbers, Peanuts, Rice, Figs, Onions, Chillies & Pomegranates." />
+  <meta name="description" content="Shrava's World (Shrava's Global Business Enterprises) - Premium Organic Products: Cow Ghee, Grapes, Cucumbers, Peanuts, Rice, Figs, Onions, Chillies, Pomegranates, Sweet Corns, Bananas & Cow Dung Cakes." />
 
 
   <!-- Meta Keywords -->
@@ -16,7 +16,7 @@
 
   <!-- Open Graph -->
 <meta property="og:title" content="Shrava's World (Shrava's Global Business Enterprises)" />
-<meta property="og:description" content="Premium Organic Products: Cow Ghee, Grapes, Cucumbers, Peanuts, Rice, Figs, Onions, Chillies & Pomegranates." />
+<meta property="og:description" content="Premium Organic Products: Cow Ghee, Grapes, Cucumbers, Peanuts, Rice, Figs, Onions, Chillies, Pomegranates, Sweet Corns, Bananas & Cow Dung Cakes." />
 <meta property="og:image" content="https://shravasworld.com/assets/images/logo/logo.png" />
 <meta property="og:url" content="https://shravasworld.com" />
 <meta property="og:type" content="website" />
@@ -151,14 +151,14 @@ h1, h2 {
 /* =========================
    Hero Section & Slides
 ========================= */
-main.hero-section {
+/* main.hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
               url('https://source.unsplash.com/1600x900/?industry,factory') no-repeat center center;
   background-size: cover;
   color: white;
   text-align: center;
   padding: 100px 20px;
-}
+} */
 
 .hero-section h1 {
   font-size: 3rem;
@@ -228,12 +228,18 @@ main.hero-section {
 }
 
 /* Desktop background */
-.hero-slide { background-image: url('assets/about-1200.png'); }
+.hero-slide { background-image: url('assets/about.png'); }
 
 .hero-slide:first-child {
   min-height: 60vh; /* reduce height only for first slide to paint faster */
 }
+.hero-slide .container h3 {
+  color: #FFD700; /* gold */
+}
 
+.hero-slide .container p {
+  color: #ffffff; /* white */
+}
 
 /* =========================
    Animations
@@ -278,6 +284,17 @@ main.hero-section {
 @media (max-width: 480px) { .custom-table { font-size: 12px; } }
 @media (max-width: 380px) { .custom-table { font-size: 10px; } }
 
+
+.custom-table thead th {
+  background-color: #d4edda !important;  /* Light green background */
+ 
+}
+[data-description] ul,
+[data-description] li {
+    line-height: 2.0 !important; /* forces this line-height */
+    margin: 0 !important;
+    padding: 0 !important;
+}
 /* =========================
    Loader Overlay
 ========================= */
@@ -316,7 +333,7 @@ main.hero-section {
       <div class="hero-slide d-flex align-items-center justify-content-center text-white text-center" style="position: relative; min-height: 60vh;">
         <!-- Low-res placeholder initially, full-res swaps in automatically -->
         <img 
-          src="assets/about-480-blur.png" 
+          src="assets/about-480.png" 
           data-srcset="assets/about-480.png 480w,
                        assets/about-768.png 768w,
                        assets/about.png 1200w"
@@ -341,7 +358,7 @@ main.hero-section {
     <div class="carousel-item">
       <div class="hero-slide d-flex align-items-center justify-content-center text-white text-center" style="position: relative; min-height: 60vh;">
         <img 
-          src="assets/about-480-blur.png"
+          src="assets/about-480.png"
           data-srcset="assets/about-480.png 480w,
                        assets/about-768.png 768w,
                        assets/about.png 1200w"
@@ -364,7 +381,7 @@ main.hero-section {
     <div class="carousel-item">
       <div class="hero-slide d-flex align-items-center justify-content-center text-white text-center" style="position: relative; min-height: 60vh;">
         <img 
-          src="assets/about-480-blur.png"
+          src="assets/about-480.png"
           data-srcset="assets/about-480.png 480w,
                        assets/about-768.png 768w,
                        assets/about.png 1200w"
@@ -421,11 +438,10 @@ main.hero-section {
       data-title="Cow Ghee"
       data-main-img="assets/images/CowGhee.jpg"
       data-images='["assets/images/CowGhee.jpg"]'
-      data-description="• <strong>Product Type:</strong> Cow Ghee
-• <strong>Definition & Origin:</strong> Made from milk of cows that produce A2 β-Casein Protein; Often prepared using the traditional Bilona/Vedic/Cultured Curd-churning route for premium grades
-• <strong>Physical / Chemical Specifications:</strong>  
-  - Milk Fat: 99% (nearly pure fat with minimal moisture)  
-  - Moisture: 0.3–0.5% max"
+    data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Cow Ghee</li><li style='margin:0; padding:0;'><strong>Definition & Origin:</strong> Made from milk of cows that produce A2 β-Casein Protein; often prepared using the traditional Bilona/Vedic/Cultured Curd-churning route for premium grades.</li><li style='margin:0; padding:0;'><strong>Physical / Chemical Specifications:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Milk Fat: 99% (nearly pure fat with minimal moisture)</li><li style='margin:0; padding:0;'>Moisture: 0.3–0.5% max</li></ul></li></ul>"
+
+
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -496,30 +512,8 @@ main.hero-section {
       data-title="Onion"
       data-main-img="assets/images/onion/onion.jpg"
       data-images='["assets/images/product3.jpg"]'
-      data-description="• <strong>Product Type:</strong> Fresh Onion
-• <strong>Origin:</strong> Select onion-growing regions of India
-• <strong>Farming Practices:</strong> Cultivated under controlled practices ensuring consistent size, colour, and shelf life; Partnered with GAP-certified farms and collection centers
-• <strong>Varieties Offered:</strong> 
-  - Red Onion – Firm texture, High shelf life  
-  - Pink Onion – Mild flavour  
-  - White Onion – Low pungency, Preferred for processing
-• <strong>Quality Parameters:</strong>  
-  - Firm, dry outer skin  
-  - Uniform shape and colour  
-  - Free from cuts, sprouting, and mechanical damage  
-  - No fungal or bacterial infection  
-• <strong>Moisture Content:</strong> Below 80%  
-• <strong>Shelf Life:</strong> 30–45 days (ambient conditions)  
-• <strong>Nutritional Value (per 100 g edible portion):</strong>  
-  - Energy: 40 kcal  
-  - Carbohydrates: 9.3 g  
-  - Protein: 1.1 g  
-  - Fat: 0.1 g  
-  - Fiber: 1.7 g  
-  - Vitamin C: 7.4 mg  
-  - Calcium: 23 mg  
-  - Iron: 0.2 mg  
-  - Potassium: 146 mg"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Fresh Onion</li><li style='margin:0; padding:0;'><strong>Origin:</strong> Select onion-growing regions of India</li><li style='margin:0; padding:0;'><strong>Farming Practices:</strong> Cultivated under controlled practices ensuring consistent size, colour, and shelf life; Partnered with GAP-certified farms and collection centers</li><li style='margin:0; padding:0;'><strong>Varieties Offered:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Red Onion – Firm texture, High shelf life</li><li style='margin:0; padding:0;'>Pink Onion – Mild flavour</li><li style='margin:0; padding:0;'>White Onion – Low pungency, Preferred for processing</li></ul></li><li style='margin:0; padding:0;'><strong>Quality Parameters:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Firm, dry outer skin</li><li style='margin:0; padding:0;'>Uniform shape and colour</li><li style='margin:0; padding:0;'>Free from cuts, sprouting, and mechanical damage</li><li style='margin:0; padding:0;'>No fungal or bacterial infection</li></ul></li><li style='margin:0; padding:0;'><strong>Moisture Content:</strong> Below 80%</li><li style='margin:0; padding:0;'><strong>Shelf Life:</strong> 30–45 days (ambient conditions)</li><li style='margin:0; padding:0;'><strong>Nutritional Value (per 100 g edible portion):</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Energy: 40 kcal</li><li style='margin:0; padding:0;'>Carbohydrates: 9.3 g</li><li style='margin:0; padding:0;'>Protein: 1.1 g</li><li style='margin:0; padding:0;'>Fat: 0.1 g</li><li style='margin:0; padding:0;'>Fiber: 1.7 g</li><li style='margin:0; padding:0;'>Vitamin C: 7.4 mg</li><li style='margin:0; padding:0;'>Calcium: 23 mg</li><li style='margin:0; padding:0;'>Iron: 0.2 mg</li><li style='margin:0; padding:0;'>Potassium: 146 mg</li></ul></li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -591,17 +585,8 @@ main.hero-section {
       data-title="Grapes"
       data-main-img="assets/images/Grapes/grapes1.jpg"
       data-images='["assets/images/Grapes/grapes.jpg", "assets/images/Grapes/grapes2.jpg"]'
-      data-description="• <strong>Product Type:</strong> Fresh Fruit 
-• <strong>Origin:</strong> India 
-• <strong>Export Grade:</strong> A / Premium Export Quality 
-• <strong>Varieties Offered:</strong> 
-  - Green – Sweet, Mild flavour  
-  - Light Green – Crisp, Sweet  
-  - Black – Rich, Sweet  
-• <strong>Variety Name:</strong> Thompson Seedless, Sonaka, Sharad Seedless 
-• <strong>Quality Parameters:</strong>  
-  - Berry Size: 16–22mm (Variety Dependent)  
-  - Brix (Sugar Content): 16–18°"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Fresh Fruit</li><li style='margin:0; padding:0;'><strong>Origin:</strong> India</li><li style='margin:0; padding:0;'><strong>Export Grade:</strong> A / Premium Export Quality</li><li style='margin:0; padding:0;'><strong>Varieties Offered:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Green – Sweet, Mild flavour</li><li style='margin:0; padding:0;'>Light Green – Crisp, Sweet</li><li style='margin:0; padding:0;'>Black – Rich, Sweet</li></ul></li><li style='margin:0; padding:0;'><strong>Variety Name:</strong> Thompson Seedless, Sonaka, Sharad Seedless</li><li style='margin:0; padding:0;'><strong>Quality Parameters:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Berry Size: 16–22mm (Variety Dependent)</li><li style='margin:0; padding:0;'>Brix (Sugar Content): 16–18°</li></ul></li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -671,16 +656,8 @@ main.hero-section {
       data-title="Cucumber"
       data-main-img="assets/images/Cucumber/cucumber.jpg"
       data-images='["assets/images/Cucumber/cucumber1.jpg"]'
-      data-description="• <strong>Product Type:</strong> Fresh Cucumber
-• <strong>Varieties Offered:</strong> 
-  - Indian Green Long, Short Green  
-  - White Cucumber  
-  - English / Seedless Cucumber
-• <strong>Quality Grades:</strong>  
-  - A Grade – Uniform shape, colour & size, Free from blemishes  
-• <strong>Taste:</strong> Crisp, Mild Flavour  
-• <strong>Moisture Content:</strong> 90–95% RH  
-• <strong>Shelf Life:</strong> 10–14 days (10–12°C)"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Fresh Cucumber</li><li style='margin:0; padding:0;'><strong>Varieties Offered:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Indian Green Long, Short Green</li><li style='margin:0; padding:0;'>White Cucumber</li><li style='margin:0; padding:0;'>English / Seedless Cucumber</li></ul></li><li style='margin:0; padding:0;'><strong>Quality Grades:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>A Grade – Uniform shape, colour & size, Free from blemishes</li></ul></li><li style='margin:0; padding:0;'><strong>Taste:</strong> Crisp, Mild Flavour</li><li style='margin:0; padding:0;'><strong>Moisture Content:</strong> 90–95% RH</li><li style='margin:0; padding:0;'><strong>Shelf Life:</strong> 10–14 days (10–12°C)</li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -752,15 +729,8 @@ main.hero-section {
       data-title="Peanuts"
       data-main-img="assets/images/Peanuts/peanuts.jpg"
       data-images='["assets/images/Peanuts/peanuts1.jpg"]'
-      data-description="• <strong>Product Type:</strong> Peanuts (Groundnuts)
-• <strong>Varieties Offered:</strong> 
-  - Java (Red Skin) – Small size, Clean, Fresh, Nutty, No Rancidity or Mold  
-  - Bold (Pink Skin) – Medium / Large size
-• <strong>Quality Parameters:</strong>  
-  - Moisture: 8%  
-  - Oil Content: 42–50%  
-  - Free Fatty Acid: 1.5%  
-  - HPS (Hand Picked & Selected) for direct consumption"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Peanuts (Groundnuts)</li><li style='margin:0; padding:0;'><strong>Varieties Offered:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Java (Red Skin) – Small size, Clean, Fresh, Nutty, No Rancidity or Mold</li><li style='margin:0; padding:0;'>Bold (Pink Skin) – Medium / Large size</li></ul></li><li style='margin:0; padding:0;'><strong>Quality Parameters:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Moisture: 8%</li><li style='margin:0; padding:0;'>Oil Content: 42–50%</li><li style='margin:0; padding:0;'>Free Fatty Acid: 1.5%</li><li style='margin:0; padding:0;'>HPS (Hand Picked & Selected) for direct consumption</li></ul></li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -827,18 +797,8 @@ main.hero-section {
       data-title="Basmati Rice"
       data-main-img="assets/images/BasmatiRice/basmati.jpg"
       data-images='["assets/images/BasmatiRice/basmati1.jpg"]'
-      data-description="• <strong>Product Type:</strong> Basmati Rice
-• <strong>Origin:</strong> India
-• <strong>Varieties Offered:</strong> 
-  - Traditional Basmati – Long grain, Aromatic, Fluffy texture  
-  - Super Basmati – Extra-long grain, Extra aroma, Soft & Non-sticky  
-• <strong>Quality Parameters:</strong>  
-  - Grain Length: 7–8 mm (Variety dependent)  
-  - Moisture Content: 12–14%  
-  - Purity: Free from stones, husk, and foreign matter  
-  - Aroma: Distinct natural Basmati fragrance  
-• <strong>Cooking & Taste:</strong> Fluffy, Soft grains, Mild nutty flavour  
-• <strong>Shelf Life:</strong> 12–18 months (in cool, dry storage)"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Basmati Rice</li><li style='margin:0; padding:0;'><strong>Origin:</strong> India</li><li style='margin:0; padding:0;'><strong>Varieties Offered:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Traditional Basmati – Long grain, Aromatic, Fluffy texture</li><li style='margin:0; padding:0;'>Super Basmati – Extra-long grain, Extra aroma, Soft & Non-sticky</li></ul></li><li style='margin:0; padding:0;'><strong>Quality Parameters:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Grain Length: 7–8 mm (Variety dependent)</li><li style='margin:0; padding:0;'>Moisture Content: 12–14%</li><li style='margin:0; padding:0;'>Purity: Free from stones, husk, and foreign matter</li><li style='margin:0; padding:0;'>Aroma: Distinct natural Basmati fragrance</li></ul></li><li style='margin:0; padding:0;'><strong>Cooking & Taste:</strong> Fluffy, Soft grains, Mild nutty flavour</li><li style='margin:0; padding:0;'><strong>Shelf Life:</strong> 12–18 months (in cool, dry storage)</li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -909,16 +869,8 @@ main.hero-section {
       data-title="Fig"
       data-main-img="assets/images/fig/Fig2.jpg"
       data-images='["assets/images/fig/Fig3.jpg","assets/images/product41.png"]'
-      data-description="• <strong>Product Type:</strong> Fresh Fig (Anjeer) 
-• <strong>Varieties Offered:</strong> 
-  - Brown Turkey  
-  - Black Mission Fig  
-  - Common Fig (Purple Colour Fig, Ficus Carica) – Sweet, nutritious, high in fibre, antioxidants & minerals; Most widely grown type in India
-• <strong>Quality Parameters:</strong>  
-  - Superior quality  
-  - Uniform size & colour  
-  - Total Soluble Solids (TSS): Minimum 16° Brix  
-  - Moisture Content: 75–85%"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Fresh Fig (Anjeer)</li><li style='margin:0; padding:0;'><strong>Varieties Offered:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Brown Turkey</li><li style='margin:0; padding:0;'>Black Mission Fig</li><li style='margin:0; padding:0;'>Common Fig (Purple Colour Fig, Ficus Carica) – Sweet, nutritious, high in fibre, antioxidants & minerals; Most widely grown type in India</li></ul></li><li style='margin:0; padding:0;'><strong>Quality Parameters:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Superior quality</li><li style='margin:0; padding:0;'>Uniform size & colour</li><li style='margin:0; padding:0;'>Total Soluble Solids (TSS): Minimum 16° Brix</li><li style='margin:0; padding:0;'>Moisture Content: 75–85%</li></ul></li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -986,14 +938,8 @@ main.hero-section {
       data-title="Green Chilli"
       data-main-img="assets/images/greenchilli/greenchilli.jpg"
       data-images='["assets/images/greenchilli/product51.jpg"]'
-      data-description="• <strong>Product Type:</strong> Fresh Green Chilli
-• <strong>Varieties Offered:</strong> 
-  - G4 (Long Green) – Dark Green, Pungent  
-  - Bullet (Short Green)  
-  - Jwala  
-  - Teja
-• <strong>Quality Parameters (Grades):</strong>  
-  - Grade A – Uniform size, colour, and shape"
+     data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Fresh Green Chilli</li><li style='margin:0; padding:0;'><strong>Varieties Offered:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>G4 (Long Green) – Dark Green, Pungent</li><li style='margin:0; padding:0;'>Bullet (Short Green)</li><li style='margin:0; padding:0;'>Jwala</li><li style='margin:0; padding:0;'>Teja</li></ul></li><li style='margin:0; padding:0;'><strong>Quality Parameters (Grades):</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Grade A – Uniform size, colour, and shape</li></ul></li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -1066,15 +1012,8 @@ main.hero-section {
       data-title="Pomegranate"
       data-main-img="assets/images/pomo/pomo3.jpg"
       data-images='["assets/images/pomo/pomo4.jpg", "assets/images/pomo/pomo5.jpg"]'
-      data-description="• <strong>Product Type:</strong> Fresh Pomegranate
-• <strong>Premium Quality Fruit:</strong> Handpicked from top orchards with ideal growing conditions
-• <strong>Popular Varieties:</strong> Bhagwa, Ganesh, Arakta – Known for deep red arils and sweetness
-• <strong>Nutrient-Rich Superfruit:</strong>  
-  - Loaded with antioxidants, Vitamin C, potassium, and polyphenols  
-  - Boosts immunity, improves heart health, and aids digestion
-• <strong>Custom Packaging Solutions:</strong> From retail clamshells to bulk export cartons
-• <strong>Global Demand:</strong> High export value in Middle East, Europe, and Southeast Asia
-• <strong>Availability:</strong> Year-round due to staggered regional cultivation cycles"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Fresh Pomegranate</li><li style='margin:0; padding:0;'><strong>Premium Quality Fruit:</strong> Handpicked from top orchards with ideal growing conditions</li><li style='margin:0; padding:0;'><strong>Popular Varieties:</strong> Bhagwa, Ganesh, Arakta – Known for deep red arils and sweetness</li><li style='margin:0; padding:0;'><strong>Nutrient-Rich Superfruit:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Loaded with antioxidants, Vitamin C, potassium, and polyphenols</li><li style='margin:0; padding:0;'>Boosts immunity, improves heart health, and aids digestion</li></ul></li><li style='margin:0; padding:0;'><strong>Custom Packaging Solutions:</strong> From retail clamshells to bulk export cartons</li><li style='margin:0; padding:0;'><strong>Global Demand:</strong> High export value in Middle East, Europe, and Southeast Asia</li><li style='margin:0; padding:0;'><strong>Availability:</strong> Year-round due to staggered regional cultivation cycles</li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -1146,14 +1085,8 @@ main.hero-section {
       data-title="Sweet Corn"
       data-main-img="assets/images/sweetcorn/sweetcorn.jpeg"
       data-images='["assets/images/sweetcorn/sweetcorn1.jpg"]'
-      data-description="• <strong>Product Type:</strong> Fresh Sweet Corn 
-• <strong>Premium Sourcing:</strong> Harvested from fertile Indian fields known for high-quality sweet corn
-• <strong>Variety Offered:</strong> Naturally sweet, tender kernels perfect for multiple cuisines
-• <strong>Handpicked Quality:</strong> Grade A, uniform size, and blemish-free cobs
-• <strong>Nutritional Value:</strong>  
-  - Rich in dietary fiber  
-  - Good source of carbohydrates for energy  
-  - Contains essential vitamins and minerals"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Fresh Sweet Corn</li><li style='margin:0; padding:0;'><strong>Premium Sourcing:</strong> Harvested from fertile Indian fields known for high-quality sweet corn</li><li style='margin:0; padding:0;'><strong>Variety Offered:</strong> Naturally sweet, tender kernels perfect for multiple cuisines</li><li style='margin:0; padding:0;'><strong>Handpicked Quality:</strong> Grade A, uniform size, and blemish-free cobs</li><li style='margin:0; padding:0;'><strong>Nutritional Value:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Rich in dietary fiber</li><li style='margin:0; padding:0;'>Good source of carbohydrates for energy</li><li style='margin:0; padding:0;'>Contains essential vitamins and minerals</li></ul></li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -1225,16 +1158,8 @@ main.hero-section {
       data-title="Banana"
       data-main-img="assets/images/banana/banana.jpg"
       data-images='["assets/images/banana/banana1.jpg"]'
-      data-description="• <strong>Product Type:</strong> Fresh Banana
-• <strong>Farm-Fresh Quality:</strong> Sourced from nutrient-rich plantations across tropical regions
-• <strong>Popular Varieties:</strong> Cavendish, Red Banana, Nendran, and more
-• <strong>Naturally Nutritious:</strong>  
-  - High in potassium, fiber, and Vitamin B6  
-  - Great for energy, digestion, and heart health
-• <strong>Ripened to Perfection:</strong> Controlled ripening ensures consistent flavor and shelf life
-• <strong>Global-Grade Processing:</strong> Cleaned, sorted, and packed under hygienic conditions
-• <strong>Custom Packaging:</strong> Available in cluster packs, cartons, or bulk as per buyer specifications
-• <strong>Reliable Export Logistics:</strong> Cold chain support for fresh and processed formats"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Fresh Banana</li><li style='margin:0; padding:0;'><strong>Farm-Fresh Quality:</strong> Sourced from nutrient-rich plantations across tropical regions</li><li style='margin:0; padding:0;'><strong>Popular Varieties:</strong> Cavendish, Red Banana, Nendran, and more</li><li style='margin:0; padding:0;'><strong>Naturally Nutritious:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>High in potassium, fiber, and Vitamin B6</li><li style='margin:0; padding:0;'>Great for energy, digestion, and heart health</li></ul></li><li style='margin:0; padding:0;'><strong>Ripened to Perfection:</strong> Controlled ripening ensures consistent flavor and shelf life</li><li style='margin:0; padding:0;'><strong>Global-Grade Processing:</strong> Cleaned, sorted, and packed under hygienic conditions</li><li style='margin:0; padding:0;'><strong>Custom Packaging:</strong> Available in cluster packs, cartons, or bulk as per buyer specifications</li><li style='margin:0; padding:0;'><strong>Reliable Export Logistics:</strong> Cold chain support for fresh and processed formats</li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -1305,14 +1230,8 @@ main.hero-section {
       data-title="Cow Dung Cakes"
       data-main-img="assets/images/CowDungCakes/CowDungCake2.jpg"
       data-images='["assets/images/CowDungCakes/CowDungCakes.jpg", "assets/images/product2.jpeg"]'
-      data-description="• <strong>Product Type:</strong> Cow Dung Cakes
-• <strong>Definition & Origin:</strong> Made from naturally dried cow dung, traditionally used as a bio-fuel and organic fertilizer; Sourced from healthy cows
-• <strong>Physical / Chemical Specifications:</strong>  
-  - Moisture Content: Low, properly dried  
-  - Shape: Uniform, easy to handle and stack  
-  - Colour: Brown, natural earthy tone  
-  - Odour: Mild, natural cow dung aroma  
-• <strong>Usage:</strong> Fuel for cooking and heating, Soil enrichment in organic farming"
+      data-description="<ul style='padding-left:15px; margin:0; list-style-type:disc; '><li style='margin:0; padding:0;'><strong>Product Type:</strong> Cow Dung Cakes</li><li style='margin:0; padding:0;'><strong>Definition & Origin:</strong> Made from naturally dried cow dung, traditionally used as a bio-fuel and organic fertilizer; Sourced from healthy cows</li><li style='margin:0; padding:0;'><strong>Physical / Chemical Specifications:</strong><ul style='padding-left:20px; margin:0; list-style-type:circle; '><li style='margin:0; padding:0;'>Moisture Content: Low, properly dried</li><li style='margin:0; padding:0;'>Shape: Uniform, easy to handle and stack</li><li style='margin:0; padding:0;'>Colour: Brown, natural earthy tone</li><li style='margin:0; padding:0;'>Odour: Mild, natural cow dung aroma</li></ul></li><li style='margin:0; padding:0;'><strong>Usage:</strong> Fuel for cooking and heating, Soil enrichment in organic farming</li></ul>"
+
       data-table='
 <table class="table table-bordered text-center align-middle custom-table">
   <thead class="table-light">
@@ -1373,6 +1292,7 @@ main.hero-section {
       </div>
     </div>
   </main>
+
 
 
   <div data-include="components/highlights.html"data-aos="fade-up"></div>
