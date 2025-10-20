@@ -12,63 +12,68 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   
   <style>
-    body {
-      background: #f5f7fa;
-    }
+/* SCOPED STYLES FOR TESTIMONIAL SECTION ONLY */
+.testimonials-section {
+  
+  font-family: 'Eczar', serif;
+}
 
-    h2 {
-      color: #333;
-    }
+.testimonials-section h2 {
+  color: #1e8167 !important;
+}
 
-     .testimonial-card {
-        border-radius: 1rem;
-        padding: 1.5rem;
-        color: #fff;
-        transition: transform 0.3s, box-shadow 0.3s;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 200px;
-        overflow: hidden;
-     }
+.testimonials-section .testimonial-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  overflow: hidden;
+}
 
-    .testimonial-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    }
+.testimonials-section .testimonial-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
 
-    .gradient-1 { background: linear-gradient(135deg, #6a11cb, #2575fc); }
-    .gradient-2 { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
-    .gradient-3 { background: linear-gradient(135deg, #43cea2, #185a9d); }
-    .gradient-4 { background: linear-gradient(135deg, #f7971e, #ffd200); }
-    .gradient-5 { background: linear-gradient(135deg, #00c6ff, #0072ff); }
-    .gradient-6 { background: linear-gradient(135deg, #e14fad, #f9d423); }
-    .gradient-7 { background: linear-gradient(135deg, #11998e, #38ef7d); }
+/* Gradient backgrounds */
+.testimonials-section .gradient-1 { background: linear-gradient(135deg, #f9d976, #f39f86); }
+.testimonials-section .gradient-2 { background: linear-gradient(135deg, #f9d976, #f39f86); }
+.testimonials-section .gradient-3 { background: linear-gradient(135deg, #f9d976, #f39f86); }
+.testimonials-section .gradient-4 { background: linear-gradient(135deg, #f9d976, #f39f86); }
+.testimonials-section .gradient-5 { background: linear-gradient(135deg, #f9d976, #f39f86); }
+.testimonials-section .gradient-6 { background: linear-gradient(135deg, #f9d976, #f39f86); }
+.testimonials-section .gradient-7 { background: linear-gradient(135deg, #f9d976, #f39f86); }
 
-    small {
-      color: #f8f9fa;
-    }
 
-    p {
-      margin-bottom: 0;
-      font-style: italic;
-    }
+.testimonials-section small {
+  color: #0c0c0c !important;
+}
 
-    .swiper {
-      padding-bottom: 50px;
-    }
+.testimonials-section p {
+  margin-bottom: 0;
+  font-style: italic !important;
+}
 
-    .swiper-pagination-bullet {
-      background-color: #333;
-    }
-  </style>
+.testimonials-section .swiper {
+  padding-bottom: 50px;
+}
+
+.testimonials-section .swiper-pagination-bullet {
+  background-color: #333 !important;
+}
+</style>
+
 </head>
 <body>
 
   <div data-include="components/navbar.html"></div>
 
-  <main class="container ">
+  <main class="container testimonials-section">
     <h2 class="text-center mb-4 fw-bold">What Our Customers Say</h2>
 
     <!-- Swiper Slider -->

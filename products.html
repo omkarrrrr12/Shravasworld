@@ -3,12 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Products - Shrava's World</title>
+  <title>Products - Shrava's World (Shrava's Global Business Enterprises)</title>
+  <meta name="description" content="Explore premium organic products from Shrava's World including Cow Ghee, Grapes, Cucumbers, Peanuts, Rice, Figs, Onions, Chillies, and Cowdung Cake." />
+
+  <!-- Meta Keywords -->
+  <meta name="keywords" content="Shrava's World, Shrava's Global Business Enterprises, Organic Products, Cow Ghee, Grapes, Rice, Peanuts, Onions, Chillies, Figs, Cucumbers, Cowdung Cake" />
+</head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <style>
+    .hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  .btn-info {
+    /* background: #17a2b8; */
+    border: none;
+  }
+  .btn-success {
+    background: #228038;
+    border: none;
+  }
+  .btn-info:hover {
+    background: #138496;
+  }
+  .btn-success:hover {
+    background: #218838;
+  }
     html, body {
       height: 100%;
       margin: 0;
@@ -16,8 +47,8 @@
       flex-direction: column;
     }
      h1, h2 {
-  font-family: 'Playfair Display', serif;
-  color: #008B8B;
+  font-family: 'Eczar', serif;
+  color: #1e8167;
 }
   body,
     h1, h2, h3, h4, h5, h6,
@@ -28,7 +59,7 @@
     input,
     select,
     textarea {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Eczar', serif;
     }
     main {
       flex: 1;
@@ -42,79 +73,154 @@
      height:100%;
       object-fit: cover;
     }
+    /* Description text */
+  #detailsDescription {
+    text-align: justify;
+    line-height: 1.6;
+  }
+
+   /* Base table styling (already applied via classes) */
+  .custom-table {
+    font-size: 16px; /* default font size */
+  }
+
+  /* Responsive adjustments for small screens */
+  @media (max-width: 768px) { /* tablets and below */
+    .custom-table {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) { /* mobile phones */
+    .custom-table {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 380px) { /* mobile phones */
+    .custom-table {
+      font-size: 10px;
+    }
+  }
+
+  .btn, 
+  .btn-info, 
+  .btn-success {
+    border-radius: 0.5rem !important; /* normal rounded corners */
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    font-size: 0.95rem !important; /* adjust font size for all screens */
+  }
+
+  /* Optional: slightly smaller buttons for extra small screens */
+  @media (max-width: 576px) {
+    .btn {
+      font-size: 0.85rem !important;
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      padding-top: 0.4rem !important;
+      padding-bottom: 0.4rem !important;
+    }
+  }
+    /* ✅ Loader styles */
+#loaderOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+}
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <div data-include="components/navbar.html"></div>
 
- <!-- Product Section -->
- <main>
-    <div class="container my-5"data-aos="fade-up" data-aos-duration="1000">
+  <!-- ✅ Loader Overlay -->
+<div id="loaderOverlay">
+  <div class="spinner-border text-light" role="status" style="width: 3rem; height: 3rem;">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+
+  <!-- Product Section -->
+<main>
+    <div class="container mt-4"data-aos="fade-up" data-aos-duration="1000">
       <h2 class="mb-4 text-center fw-bold" >Our Products</h2>
       <div class="row" id="product-list">
         
         <!-- Product 1 -->
-      <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/CowGhee.jpg" class="card-img-top" alt="Cow Ghee" />
+    <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/CowGhee.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Cow Ghee"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Cow Ghee"
+      data-main-img="assets/images/CowGhee.jpg"
+      data-images='["assets/images/CowGhee.jpg"]'
+      data-description="• <strong>Product Type:</strong> Cow Ghee
+• <strong>Definition & Origin:</strong> Made from milk of cows that produce A2 β-Casein Protein; Often prepared using the traditional Bilona/Vedic/Cultured Curd-churning route for premium grades
+• <strong>Physical / Chemical Specifications:</strong>  
+  - Milk Fat: 99% (nearly pure fat with minimal moisture)  
+  - Moisture: 0.3–0.5% max"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Regular A2 Ghee)</th>
+      <th class="align-middle">Packaged / Long-Life A2 Ghee</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>A2 Cow Ghee (Freshly Made from Desi Cow Milk)</td>
+      <td>A2 Cow Ghee (Organic / Processed for Longer Shelf Life)</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Premium Grade, Pure, Golden Yellow, Rich Aroma</td>
+      <td>Export Quality, Food-grade, Uniform Texture, High Purity</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>3–6 months (Without preservatives & dry conditions)</td>
+      <td>9–12 months (airtight, vacuum-sealed packaging), After opening 6–8 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Steel containers, Earthen pots, Glass jars</td>
+      <td>PET jars, Tin cans, Sachets, Bulk packs</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Cow Ghee</h5>
+      <h5 class="card-title fw-semibold text-dark">Cow Ghee</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Cow Ghee"
-          data-main-img="assets/images/CowGhee.jpg"
-          
-          data-description="Benefits of A2 Ghee: 
-
-Helps in Digestion:
-
-A2 Ghee is beneficial for the intestines and aids in digestion, which reduces problems like constipation and acidity. 
-
-Boosts Immunity:
-
-The nutrients present in A2 Ghee help in boosting immunity, which enables the body to fight various diseases. 
-
-Beneficial for Bones:
-
-A2 Ghee is a rich source of Vitamin K2, which helps in calcium absorption and improves bone health. 
-
-Good for Heart:
-
-The omega-3 and omega-9 fatty acids present in A2 Ghee are considered good for the heart.  This reduces the risk of heart diseases. 
-
-Beneficial for Skin:
-
-A2 Ghee moisturizes and nourishes the skin, making it look radiant and healthy. 
-
-Energizes the Body:
-
-A2 Ghee energizes the body and helps in reducing fatigue, making you feel energetic throughout the day. 
-
- Helps in weight loss naturally:
-
-The fatty acids present in A2 ghee improve metabolism, which helps in weight loss.
-
-How to use A2 ghee:
-
-You can include A2 ghee in your diet in various ways, such as adding it to rice, pol, dal, or vegetables.
-
-You can take one spoon of it in the morning on an empty stomach.
-
-A2 ghee can be used in vegetables, parathas, and other dishes.
-
-A2 ghee is also used to moisturize the skin and for massage.">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Cow Ghee">
-          Request Quote
+          data-product="Cow Ghee"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
@@ -122,237 +228,395 @@ A2 ghee is also used to moisturize the skin and for massage.">
 </div>
 
 
-        <!-- Product 2 -->
-       <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/CowDungCakes/CowDungCake2.jpg" class="card-img-top" alt="Hydraulic Valve" />
+
+       <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/CowDungCakes/CowDungCake2.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Cow Dung Cakes"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Cow Dung Cakes"
+      data-main-img="assets/images/CowDungCakes/CowDungCake2.jpg"
+      data-images='["assets/images/CowDungCakes/CowDungCakes.jpg", "assets/images/product2.jpeg"]'
+      data-description="• <strong>Product Type:</strong> Cow Dung Cakes
+• <strong>Definition & Origin:</strong> Made from naturally dried cow dung, traditionally used as a bio-fuel and organic fertilizer; Sourced from healthy cows
+• <strong>Physical / Chemical Specifications:</strong>  
+  - Moisture Content: Low, properly dried  
+  - Shape: Uniform, easy to handle and stack  
+  - Colour: Brown, natural earthy tone  
+  - Odour: Mild, natural cow dung aroma  
+• <strong>Usage:</strong> Fuel for cooking and heating, Soil enrichment in organic farming"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Whole Cakes)</th>
+      <th class="align-middle">Powder (Loose / Ground)</th>
+      <th class="align-middle">Dehydrated (Compressed / Packaged Cakes)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Fresh Cow Dung Cakes (Handmade)</td>
+      <td>Cow Dung Powder (Ground Form)</td>
+      <td>Dehydrated / Sun-dried Cow Dung Cakes</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Natural, Hand-molded, Organic</td>
+      <td>Fine, Uniform Powder, Food-grade (non-edible use)</td>
+      <td>Food-grade, Even Drying, Odor-controlled</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>5–7 days (short-term, perishable)</td>
+      <td>12–18 months (if dry & sealed)</td>
+      <td>12–24 months (under dry storage)</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Loose bundles, Sacks</td>
+      <td>Polybags, LDPE / Paper bags</td>
+      <td>Cartons, Polybags, Vacuum packs, Bulk packs</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Cow Dung Cakes</h5>
+      <h5 class="card-title fw-semibold text-dark">Cow Dung Cakes</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Cow Dung Cakes"
-          data-main-img="assets/images/CowDungCakes/CowDungCake2.jpg"
-          data-images='["assets/images/CowDungCakes/CowDungCakes.jpg", "assets/images/product2.jpeg"]'
-          data-description="Benefits of Cow Dung Cakes:
-
-Natural Fertilizer for Plants:
-Cow dung is rich in organic matter and essential nutrients like nitrogen, phosphorus, and potassium. It improves soil fertility and supports sustainable agriculture.
-
-Eco-Friendly Fuel:
-Used as a traditional and eco-friendly source of fuel in rural areas for cooking and heating. It emits less pollution compared to wood or coal.
-
-Purifies the Environment:
-When burned, cow dung releases natural compounds that are believed to purify the air and repel insects.
-
-Used in Religious Rituals:
-Cow dung cakes are commonly used in yajnas, havans, and other religious ceremonies due to their sacred and purifying nature.
-
-Insect Repellent and Disinfectant:
-The antimicrobial properties of cow dung help in repelling insects and pests. It is also used to coat walls and floors in traditional homes to maintain hygiene.
-
-Sustainable Composting:
-Cow dung aids in composting by accelerating the breakdown of organic waste, making it an excellent component for organic farming.
-
-Cost-Effective and Renewable:
-It is a renewable, low-cost source of energy that reduces the reliance on non-renewable fuels.
-
-How to use Cow Dung Cakes:
-
-They can be directly used for havans and puja rituals by lighting them.
-
-Crushed cakes can be added to compost or mixed in soil for plant nourishment.
-
-Can be used as fuel in traditional mud stoves (chulhas) for cooking.
-
-Ideal for organic farming, gardening, and religious use."">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Cow Dung Cakes">
-          Request Quote
+          data-product="Cow Dung Cakes"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
   </div>
 </div>
+
 
 
 <!-- Product: Grapes -->
 <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/Grapes/grapes1.jpg" class="card-img-top" alt="Grapes" />
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/Grapes/grapes1.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Grapes"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Grapes"
+      data-main-img="assets/images/Grapes/grapes1.jpg"
+      data-images='["assets/images/Grapes/grapes.jpg", "assets/images/Grapes/grapes2.jpg"]'
+      data-description="• <strong>Product Type:</strong> Fresh Fruit 
+• <strong>Origin:</strong> India 
+• <strong>Export Grade:</strong> A / Premium Export Quality 
+• <strong>Varieties Offered:</strong> 
+  - Green – Sweet, Mild flavour  
+  - Light Green – Crisp, Sweet  
+  - Black – Rich, Sweet  
+• <strong>Variety Name:</strong> Thompson Seedless, Sonaka, Sharad Seedless 
+• <strong>Quality Parameters:</strong>  
+  - Berry Size: 16–22mm (Variety Dependent)  
+  - Brix (Sugar Content): 16–18°"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+     <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Table Grapes)</th>
+      <th class="align-middle">Frozen (Whole Grapes)</th>
+      <th class="align-middle">Dehydrated (Raisins / Dried Grapes)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Seedless / Seeded (Green, Black)</td>
+      <td>Grapes (IQF – Whole, Seedless)</td>
+      <td>Raisins / Sultanas / Dried Grapes</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Grade A, Handpicked, Export Quality</td>
+      <td>Export Grade, IQF, Preserves Shape & Flavour</td>
+      <td>Food-grade, Uniform Size, Naturally Dried</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>2–3 weeks (under cold storage)</td>
+      <td>12 months</td>
+      <td>12 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Punnets, Corrugated boxes, Cartons</td>
+      <td>Polybags, Vacuum packs, Cartons</td>
+      <td>LDPE / Paper bags, Cartons, Bulk packs</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Grapes</h5>
+      <h5 class="card-title fw-semibold text-dark">Grapes</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Grapes"
-          data-main-img="assets/images/Grapes/grapes1.jpg"
-          data-images='["assets/images/Grapes/grapes.jpg", "assets/images/Grapes/grapes2.jpg"]'
-          data-description="Benefits of Grapes:
-
-Rich in Nutrients:
-Packed with vitamins C and K, grapes provide antioxidants that help improve immunity and maintain healthy skin.
-
-Supports Heart Health:
-The antioxidants in grapes help reduce cholesterol levels and improve blood circulation.
-
-Hydration and Energy:
-Grapes are high in water content and natural sugars, making them a refreshing and energy-boosting fruit.
-
-Improves Digestion:
-Their fiber content supports better digestion and gut health.
-
-How to use Grapes:
-Eat fresh as a snack, use in fruit salads, desserts, juices, or as a topping for yogurt and cereals.">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Grapes">
-          Request Quote
+          data-product="Grapes"
+        >
+          <i class="bi bi-bag"></i> Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/Cucumber/cucumber.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Cucumber"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Cucumber"
+      data-main-img="assets/images/Cucumber/cucumber.jpg"
+      data-images='["assets/images/Cucumber/cucumber1.jpg"]'
+      data-description="• <strong>Product Type:</strong> Fresh Cucumber
+• <strong>Varieties Offered:</strong> 
+  - Indian Green Long, Short Green  
+  - White Cucumber  
+  - English / Seedless Cucumber
+• <strong>Quality Grades:</strong>  
+  - A Grade – Uniform shape, colour & size, Free from blemishes  
+• <strong>Taste:</strong> Crisp, Mild Flavour  
+• <strong>Moisture Content:</strong> 90–95% RH  
+• <strong>Shelf Life:</strong> 10–14 days (10–12°C)"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Whole Cucumbers)</th>
+      <th class="align-middle">Frozen (Slices / Diced – IQF)</th>
+      <th class="align-middle">Dehydrated (Flakes / Powder / Chips)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Green Cucumber / English Cucumber / Gherkins</td>
+      <td>Cucumber (IQF – Sliced / Diced)</td>
+      <td>Cucumber Flakes, Powder, Chips</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Grade A, Handpicked, Export Quality</td>
+      <td>Export Grade, IQF, Retains Colour & Texture</td>
+      <td>Food-grade, Uniform Drying</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>1–2 weeks (under cold storage)</td>
+      <td>8/9 months</td>
+      <td>18–24 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Cartons, Crates, Polybags</td>
+      <td>Polybags, Vacuum packs, Cartons</td>
+      <td>Foil packs, LDPE / Paper bags, Bulk packs</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title fw-semibold text-dark">Cucumber</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Cucumber"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Product: Cucumber -->
+
 <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/Cucumber/cucumber.jpg" class="card-img-top" alt="Cucumber" />
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/Peanuts/peanuts.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Peanuts"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Peanuts"
+      data-main-img="assets/images/Peanuts/peanuts.jpg"
+      data-images='["assets/images/Peanuts/peanuts1.jpg"]'
+      data-description="• <strong>Product Type:</strong> Peanuts (Groundnuts)
+• <strong>Varieties Offered:</strong> 
+  - Java (Red Skin) – Small size, Clean, Fresh, Nutty, No Rancidity or Mold  
+  - Bold (Pink Skin) – Medium / Large size
+• <strong>Quality Parameters:</strong>  
+  - Moisture: 8%  
+  - Oil Content: 42–50%  
+  - Free Fatty Acid: 1.5%  
+  - HPS (Hand Picked & Selected) for direct consumption"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (In-Shell / Raw)</th>
+      <th class="align-middle">Dehydrated (Roasted / Powder / Splits)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Raw Peanuts (In-shell / Kernels)</td>
+      <td>Roasted Peanuts, Peanut Powder, Splits</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Grade A, Handpicked, Food-grade</td>
+      <td>Food-grade, Uniform Drying & Roasting</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>2–3 months (under dry storage)</td>
+      <td>12–18 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Jute bags, Polybags, Sacks</td>
+      <td>Foil packs, LDPE / Paper bags, Bulk packs</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Cucumber</h5>
+      <h5 class="card-title fw-semibold text-dark">Peanuts</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Cucumber"
-          data-main-img="assets/images/Cucumber/cucumber.jpg"
-          data-images='["assets/images/Cucumber/cucumber1.jpg"]'
-          data-description="Benefits of Cucumber:
-
-Hydration:
-Cucumber is 95% water, making it excellent for hydration.
-
-Skin Health:
-It cools the body, reduces puffiness, and is often used in skincare.
-
-Rich in Nutrients:
-Contains vitamin K, potassium, and antioxidants for overall health.
-
-Aids Digestion:
-Its fiber content helps regulate digestion and prevent constipation.
-
-How to use Cucumber:
-Eat raw in salads, sandwiches, or juices. Use in skincare for cooling and refreshing effects.">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Cucumber">
-          Request Quote
+          data-product="Peanuts"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Product: Peanuts -->
+
 <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/Peanuts/peanuts.jpg" class="card-img-top" alt="Peanuts" />
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/BasmatiRice/basmati.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Basmati Rice"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Basmati Rice"
+      data-main-img="assets/images/BasmatiRice/basmati.jpg"
+      data-images='["assets/images/BasmatiRice/basmati1.jpg"]'
+      data-description="• <strong>Product Type:</strong> Basmati Rice
+• <strong>Origin:</strong> India
+• <strong>Varieties Offered:</strong> 
+  - Traditional Basmati – Long grain, Aromatic, Fluffy texture  
+  - Super Basmati – Extra-long grain, Extra aroma, Soft & Non-sticky  
+• <strong>Quality Parameters:</strong>  
+  - Grain Length: 7–8 mm (Variety dependent)  
+  - Moisture Content: 12–14%  
+  - Purity: Free from stones, husk, and foreign matter  
+  - Aroma: Distinct natural Basmati fragrance  
+• <strong>Cooking & Taste:</strong> Fluffy, Soft grains, Mild nutty flavour  
+• <strong>Shelf Life:</strong> 12–18 months (in cool, dry storage)"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Raw / Freshly Milled (White or Brown)</th>
+      <th class="align-middle">Dehydrated / Processed (Parboiled / Aged / Instant)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Basmati Rice (Raw Milled – White / Brown)</td>
+      <td>Parboiled Basmati, Aged Basmati, Instant Rice</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Premium Grade, Long Grain, Aromatic</td>
+      <td>Export Grade, Uniformly Processed, Retains Aroma</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>12 months (if stored in dry, cool place)</td>
+      <td>18–24 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Jute bags, Cotton bags, Polybags</td>
+      <td>Vacuum packs, Foil packs, LDPE bags, Bulk sacks</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Peanuts</h5>
+      <h5 class="card-title fw-semibold text-dark">Basmati Rice</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Peanuts"
-          data-main-img="assets/images/Peanuts/peanuts.jpg"
-          data-images='["assets/images/Peanuts/peanuts1.jpg"]'
-          data-description="Benefits of Peanuts:
-
-Rich in Protein:
-A great source of plant-based protein for energy and muscle health.
-
-Heart Health:
-Contain healthy fats that help lower cholesterol and reduce the risk of heart disease.
-
-Nutrient Dense:
-Packed with magnesium, vitamin E, and antioxidants.
-
-Weight Management:
-Promotes satiety and reduces unnecessary snacking.
-
-How to use Peanuts:
-Eat raw, roasted, or as peanut butter. Use in snacks, sweets, salads, and cooking.">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Peanuts">
-          Request Quote
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Product: Basmati Rice -->
-<div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/BasmatiRice/basmati.jpg" class="card-img-top" alt="Basmati Rice" />
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Basmati Rice</h5>
-
-      <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Basmati Rice"
-          data-main-img="assets/images/BasmatiRice/basmati.jpg"
-          data-images='["assets/images/BasmatiRice/basmati1.jpg"]'
-          data-description="Benefits of Basmati Rice:
-
-Rich Aroma & Flavor:
-Known for its natural fragrance and long grains.
-
-Healthy Carbohydrates:
-Provides sustained energy with low to medium glycemic index.
-
-Easy to Digest:
-Light on the stomach and suitable for daily meals.
-
-Nutritional Value:
-Contains vitamins, minerals, and is low in fat.
-
-How to use Basmati Rice:
-Cook for biryanis, pulao, fried rice, or daily meals. Ideal for festive dishes due to its rich aroma.">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#quoteModal"
-          data-product="Basmati Rice">
-          Request Quote
+          data-product="Basmati Rice"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
@@ -360,107 +624,172 @@ Cook for biryanis, pulao, fried rice, or daily meals. Ideal for festive dishes d
 </div>
 
         <!-- Product 3 -->
-       <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/onion/onion.jpg" class="card-img-top" alt="Onion" />
+       <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/onion/onion.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Onion"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Onion"
+      data-main-img="assets/images/onion/onion.jpg"
+      data-images='["assets/images/product3.jpg"]'
+      data-description="• <strong>Product Type:</strong> Fresh Onion
+• <strong>Origin:</strong> Select onion-growing regions of India
+• <strong>Farming Practices:</strong> Cultivated under controlled practices ensuring consistent size, colour, and shelf life; Partnered with GAP-certified farms and collection centers
+• <strong>Varieties Offered:</strong> 
+  - Red Onion – Firm texture, High shelf life  
+  - Pink Onion – Mild flavour  
+  - White Onion – Low pungency, Preferred for processing
+• <strong>Quality Parameters:</strong>  
+  - Firm, dry outer skin  
+  - Uniform shape and colour  
+  - Free from cuts, sprouting, and mechanical damage  
+  - No fungal or bacterial infection  
+• <strong>Moisture Content:</strong> Below 80%  
+• <strong>Shelf Life:</strong> 30–45 days (ambient conditions)  
+• <strong>Nutritional Value (per 100 g edible portion):</strong>  
+  - Energy: 40 kcal  
+  - Carbohydrates: 9.3 g  
+  - Protein: 1.1 g  
+  - Fat: 0.1 g  
+  - Fiber: 1.7 g  
+  - Vitamin C: 7.4 mg  
+  - Calcium: 23 mg  
+  - Iron: 0.2 mg  
+  - Potassium: 146 mg"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Whole Bulbs)</th>
+      <th class="align-middle">Frozen (Slices / Diced)</th>
+      <th class="align-middle">Dehydrated (Flakes / Powder / Granules)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Red / White / Yellow Onion</td>
+      <td>Onion (IQF Slices, Diced)</td>
+      <td>Onion Flakes, Powder, Granules</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Grade A, Handpicked</td>
+      <td>Export Grade, IQF</td>
+      <td>Food-grade, Uniform Drying</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>3–5 weeks (under proper storage)</td>
+      <td>12 months</td>
+      <td>18–24 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Mesh bags, Jute sacks</td>
+      <td>Polybags, Cartons</td>
+      <td>Foil packs, LDPE / Paper bags / Vacuum bags</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Onion</h5>
+      <h5 class="card-title fw-semibold text-dark">Onion</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Onion"
-          data-main-img="assets/images/onion/onion.jpg"
-          data-images='["assets/images/product3.jpg"]'
-          data-description="Benefits of Onion:
-
-Supports Heart Health:
-Onions contain antioxidants and compounds like quercetin that help in reducing cholesterol levels and lowering blood pressure, supporting overall heart health.
-
-Boosts Immunity:
-Rich in vitamin C and phytochemicals, onions help strengthen the immune system and fight off infections.
-
-Improves Digestion:
-Onions are a good source of dietary fiber, which aids in healthy digestion and prevents constipation.
-
-Regulates Blood Sugar:
-Onions contain compounds that can help regulate blood sugar levels, making them beneficial for people with diabetes when consumed in moderation.
-
-Anti-Inflammatory Properties:
-The sulfur compounds in onions have anti-inflammatory effects and may help reduce inflammation in the body.
-
-Rich in Antioxidants:
-Onions are loaded with antioxidants that help protect the body from free radical damage and oxidative stress.
-
-Promotes Healthy Skin and Hair:
-Onions are known to improve skin texture and promote hair growth due to their high sulfur content.
-
-How to use Onion:
-
-Can be consumed raw in salads or as a garnish for various dishes.
-
-Used in cooking for curries, gravies, stir-fries, soups, and sauces.
-
-Can be juiced or applied topically for hair and skin benefits.
-
-Can be pickled and preserved for long-term use.
-
-An essential ingredient in daily cooking and traditional home remedies.">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Onion">
-          Request Quote
+          data-product="Onion"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
   </div>
 </div>
+
 
 
         <!-- Product 4 -->
-      <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/fig/Fig2.jpg" class="card-img-top" alt="Fig"/>
+      <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/fig/Fig2.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Fig"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Fig"
+      data-main-img="assets/images/fig/Fig2.jpg"
+      data-images='["assets/images/fig/Fig3.jpg","assets/images/product41.png"]'
+      data-description="• <strong>Product Type:</strong> Fresh Fig (Anjeer) 
+• <strong>Varieties Offered:</strong> 
+  - Brown Turkey  
+  - Black Mission Fig  
+  - Common Fig (Purple Colour Fig, Ficus Carica) – Sweet, nutritious, high in fibre, antioxidants & minerals; Most widely grown type in India
+• <strong>Quality Parameters:</strong>  
+  - Superior quality  
+  - Uniform size & colour  
+  - Total Soluble Solids (TSS): Minimum 16° Brix  
+  - Moisture Content: 75–85%"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Whole Figs)</th>
+      <th class="align-middle">Dehydrated (Dried Figs / Anjeer)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Fresh Figs (Green / Black / Purple varieties)</td>
+      <td>Sun-dried / Mechanically dried figs</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Grade A, Handpicked, Export Quality</td>
+      <td>Food-grade, Uniform Drying, Soft Texture</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>5–7 days (under cold storage)</td>
+      <td>12–18 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Cartons, Trays, Clamshell packs</td>
+      <td>LDPE / Foil packs, Cartons, Bulk packs</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Fig</h5>
+      <h5 class="card-title fw-semibold text-dark">Fig</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Fig"
-          data-main-img="assets/images/fig/Fig2.jpg"
-          data-images='["assets/images/fig/Fig3.jpg","assets/images/product41.png"]'
-          data-description="There are many benefits of eating Anjeer. It is good for digestion, good for the heart, good for bones, useful for blood purification, controlling diabetes, weight loss and good for the brain. 
-
-For digestion: Since figs are rich in fiber, it helps in improving digestion. It is also useful for problems like constipation and indigestion. 
-
-For heart: Since figs are rich in potassium and fiber, it is good for the heart. It helps in controlling blood pressure and reducing the risk of heart diseases. 
-
-For bones: Since figs are rich in calcium and phosphorus, it helps in keeping bones strong. 
-
-For blood purification and skin: Figs are useful in purifying the blood and making the skin glow. 
-
-For diabetes: The fiber present in figs helps in controlling blood sugar levels. 
-
-For weight loss: Since figs are low in calories and high in fiber, it helps in losing weight. 
-
- For the brain: The antioxidants in figs are beneficial for the brain.
-
-Other benefits: Figs are also particularly beneficial for men, and are also useful for problems like cough and allergies">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Fig">
-          Request Quote
+          data-product="Fig"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
@@ -468,60 +797,79 @@ Other benefits: Figs are also particularly beneficial for men, and are also usef
 </div>
 
 
-        <!-- Product 5 -->
-       <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/greenchilli/greenchilli.jpg" class="card-img-top" alt="Green Chilli" />
+
+       <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/greenchilli/greenchilli.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Green Chilli"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Green Chilli"
+      data-main-img="assets/images/greenchilli/greenchilli.jpg"
+      data-images='["assets/images/greenchilli/product51.jpg"]'
+      data-description="• <strong>Product Type:</strong> Fresh Green Chilli
+• <strong>Varieties Offered:</strong> 
+  - G4 (Long Green) – Dark Green, Pungent  
+  - Bullet (Short Green)  
+  - Jwala  
+  - Teja
+• <strong>Quality Parameters (Grades):</strong>  
+  - Grade A – Uniform size, colour, and shape"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Whole Pods)</th>
+      <th class="align-middle">Frozen (Whole / Sliced)</th>
+      <th class="align-middle">Dehydrated (Flakes / Powder)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Green Chilli (Hot / Mild varieties)</td>
+      <td>Green Chilli (IQF – Whole or Sliced)</td>
+      <td>Green Chilli Flakes / Powder</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Grade A, Handpicked</td>
+      <td>Export Grade, IQF</td>
+      <td>Food-grade, Uniform Drying</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>1–2 weeks to 1 month (under cold storage)</td>
+      <td>3–4 months+</td>
+      <td>18–24 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Net bags, Cartons, Crates</td>
+      <td>Polybags, Vacuum packs, Cartons</td>
+      <td>Foil packs, LDPE / Paper bags, Bulk packs</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Green Chilli</h5>
+      <h5 class="card-title fw-semibold text-dark">Green Chilli</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Green Chilli"
-          data-main-img="assets/images/greenchilli/greenchilli.jpg"
-          data-images='["assets/images/greenchilli/product51.jpg"]'
-          data-description="Benefits of Green Chilli:
-
-Rich in Vitamins:
-Green chillies are a great source of vitamin C, vitamin A, and vitamin B6 which support immunity, eye health, and overall metabolism.
-
-Boosts Immunity:
-The antioxidants and vitamin C in green chillies help strengthen the immune system and fight off infections.
-
-Improves Digestion:
-Green chillies stimulate the digestive system by increasing the secretion of digestive juices and enzymes.
-
-Supports Weight Loss:
-The capsaicin in green chillies helps in increasing metabolism, which can assist in burning calories and managing weight.
-
-Controls Blood Sugar:
-Green chillies have a low glycemic index and may help in managing blood sugar levels when included as part of a balanced diet.
-
-Good for Skin and Hair:
-Green chillies contain vitamin E which is good for healthy skin and promotes hair growth.
-
-Relieves Nasal Congestion:
-The heat from green chillies can help in clearing nasal congestion and improving airflow during colds or sinus issues.
-
-How to use Green Chilli:
-
-Can be used fresh in salads, chutneys, pickles, and garnishes.
-
-Used in cooking for flavoring curries, dals, stir-fried dishes, and rice preparations.
-
-Can be dried and powdered for long-term use as a spice.
-
-Used to make green chilli paste or infused oils for added heat in recipes">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Green Chilli">
-          Request Quote
+          data-product="Green Chilli"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
@@ -529,67 +877,246 @@ Used to make green chilli paste or infused oils for added heat in recipes">
 </div>
 
 
-        <!-- Product 6 -->
-        <div class="col-sm-6 col-md-4 mb-4"data-aos="fade-up" data-aos-duration="1000">
-  <div class="card h-100">
-    <img src="assets/images/pomo/pomo3.jpg" class="card-img-top" alt="Pomegranate" />
+
+       <div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/pomo/pomo3.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Pomegranate"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Pomegranate"
+      data-main-img="assets/images/pomo/pomo3.jpg"
+      data-images='["assets/images/pomo/pomo4.jpg", "assets/images/pomo/pomo5.jpg"]'
+      data-description="• <strong>Product Type:</strong> Fresh Pomegranate
+• <strong>Premium Quality Fruit:</strong> Handpicked from top orchards with ideal growing conditions
+• <strong>Popular Varieties:</strong> Bhagwa, Ganesh, Arakta – Known for deep red arils and sweetness
+• <strong>Nutrient-Rich Superfruit:</strong>  
+  - Loaded with antioxidants, Vitamin C, potassium, and polyphenols  
+  - Boosts immunity, improves heart health, and aids digestion
+• <strong>Custom Packaging Solutions:</strong> From retail clamshells to bulk export cartons
+• <strong>Global Demand:</strong> High export value in Middle East, Europe, and Southeast Asia
+• <strong>Availability:</strong> Year-round due to staggered regional cultivation cycles"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Whole)</th>
+      <th class="align-middle">Frozen (Arils)</th>
+      <th class="align-middle">Dehydrated (Arils / Powder)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Variety</td>
+      <td>Bhagwa</td>
+      <td>IQF Arils</td>
+      <td>Dried Arils, Powder</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Bright Red, Export Quality</td>
+      <td>Intact Arils, No Cracking</td>
+      <td>Clean, Deep Color</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>20–30 days</td>
+      <td>12 months</td>
+      <td>18 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Corrugated boxes</td>
+      <td>IQF bags, LDPE packs</td>
+      <td>Foil packs, jars</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
     <div class="card-body d-flex flex-column">
-      <h5 class="card-title">Pomegranate</h5>
+      <h5 class="card-title fw-semibold text-dark">Pomegranate</h5>
 
       <div class="mt-auto d-flex gap-2">
-        <button class="btn btn-info view-details-btn"
-          data-bs-toggle="modal"
-          data-bs-target="#detailsModal"
-          data-title="Pomegranate"
-          data-main-img="assets/images/pomo/pomo3.jpg"
-          data-images='[ "assets/images/pomo/pomo4.jpg", "assets/images/pomo/pomo5.jpg"]'
-          data-description="Benefits of Pomegranate:
-
-Rich in Antioxidants:
-Pomegranate is loaded with antioxidants like punicalagins and anthocyanins which help protect the body against free radical damage and oxidative stress.
-
-Boosts Heart Health:
-It may help reduce blood pressure, lower cholesterol levels, and improve overall heart function by keeping arteries flexible and reducing plaque buildup.
-
-Improves Hemoglobin Levels:
-Pomegranate is known to boost hemoglobin and is especially beneficial for people with low iron levels or anemia.
-
-Supports Digestion:
-Its fiber content helps improve digestion and prevents issues like constipation.
-
-Anti-Inflammatory Properties:
-The natural compounds in pomegranate help reduce inflammation in the body, which can benefit people with arthritis and other chronic conditions.
-
-Strengthens Immunity:
-Rich in vitamin C and other nutrients, pomegranate helps support a strong immune system and enhances resistance to infections.
-
-Promotes Healthy Skin:
-Pomegranate helps in maintaining glowing skin, reducing acne, and delaying signs of aging due to its antioxidant and anti-inflammatory properties.
-
-How to use Pomegranate:
-
-Can be consumed fresh by eating the seeds directly.
-
-Juice can be extracted and consumed as a refreshing and healthy drink.
-
-Can be added to fruit salads, desserts, smoothies, and yogurt.
-
-Used in cooking for garnishing curries, rice dishes, and salads.
-
-Ideal for daily consumption to improve overall health and vitality.">
-          View Details
-        </button>
-
-        <button class="btn btn-primary request-quote-btn"
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#quoteModal"
-          data-product="Pomegranate">
-          Request Quote
+          data-product="Pomegranate"
+        >
+          <i class="bi bi-bag"></i> Request Quote
         </button>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Product: Sweet Corn -->
+<div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/sweetcorn/sweetcorn.jpeg" 
+      class="card-img-top view-details-img" 
+      alt="Sweet Corn"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Sweet Corn"
+      data-main-img="assets/images/sweetcorn/sweetcorn.jpeg"
+      data-images='["assets/images/sweetcorn/sweetcorn1.jpg"]'
+      data-description="• <strong>Product Type:</strong> Fresh Sweet Corn 
+• <strong>Premium Sourcing:</strong> Harvested from fertile Indian fields known for high-quality sweet corn
+• <strong>Variety Offered:</strong> Naturally sweet, tender kernels perfect for multiple cuisines
+• <strong>Handpicked Quality:</strong> Grade A, uniform size, and blemish-free cobs
+• <strong>Nutritional Value:</strong>  
+  - Rich in dietary fiber  
+  - Good source of carbohydrates for energy  
+  - Contains essential vitamins and minerals"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh (Whole Cobs)</th>
+      <th class="align-middle">Frozen (Kernels / Cobs)</th>
+      <th class="align-middle">Dehydrated (Kernels)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type</td>
+      <td>Sweet Corn</td>
+      <td>Sweet Corn (IQF)</td>
+      <td>Whole Kernels</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Grade A, Handpicked</td>
+      <td>Export Grade, IQF</td>
+      <td>Food-grade, Dried Evenly</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>5–7 days</td>
+      <td>12 months</td>
+      <td>18 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Net bags, sacks</td>
+      <td>Vacuum packs or polybags</td>
+      <td>Foil or LDPE packs</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title fw-semibold text-dark">Sweet Corn</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Sweet Corn"
+        >
+          <i class="bi bi-bag"></i> Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product: Banana -->
+<div class="col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+  <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-card">
+    <!-- Image triggers modal -->
+    <img 
+      src="assets/images/banana/banana.jpg" 
+      class="card-img-top view-details-img" 
+      alt="Banana"
+      style="cursor:pointer;"
+      data-bs-toggle="modal"
+      data-bs-target="#detailsModal"
+      data-title="Banana"
+      data-main-img="assets/images/banana/banana.jpg"
+      data-images='["assets/images/banana/banana1.jpg"]'
+      data-description="• <strong>Product Type:</strong> Fresh Banana
+• <strong>Farm-Fresh Quality:</strong> Sourced from nutrient-rich plantations across tropical regions
+• <strong>Popular Varieties:</strong> Cavendish, Red Banana, Nendran, and more
+• <strong>Naturally Nutritious:</strong>  
+  - High in potassium, fiber, and Vitamin B6  
+  - Great for energy, digestion, and heart health
+• <strong>Ripened to Perfection:</strong> Controlled ripening ensures consistent flavor and shelf life
+• <strong>Global-Grade Processing:</strong> Cleaned, sorted, and packed under hygienic conditions
+• <strong>Custom Packaging:</strong> Available in cluster packs, cartons, or bulk as per buyer specifications
+• <strong>Reliable Export Logistics:</strong> Cold chain support for fresh and processed formats"
+      data-table='
+<table class="table table-bordered text-center align-middle custom-table">
+  <thead class="table-light">
+    <tr>
+      <th class="align-middle">Specification</th>
+      <th class="align-middle">Fresh</th>
+      <th class="align-middle">Frozen (Slices / Pulp)</th>
+      <th class="align-middle">Dehydrated (Chips / Powder)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Varieties</td>
+      <td>Cavendish, Red, Nendran</td>
+      <td>Pulp or IQF Slices</td>
+      <td>Chips (Salted / Natural), Powder</td>
+    </tr>
+    <tr>
+      <td>Grade & Quality</td>
+      <td>Grade A, Ripened</td>
+      <td>No Browning, IQF Standard</td>
+      <td>Crispy, Long Shelf-Life</td>
+    </tr>
+    <tr>
+      <td>Shelf Life</td>
+      <td>7 days</td>
+      <td>12 months</td>
+      <td>24 months</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>13–18 kg cartons</td>
+      <td>Polybags, drums</td>
+      <td>Pouches, jars</td>
+    </tr>
+  </tbody>
+</table>'
+    />
+
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title fw-semibold text-dark">Banana</h5>
+
+      <div class="mt-auto d-flex gap-2">
+        <!-- Only Request Quote Button remains -->
+        <button
+          class="btn btn-success request-quote-btn px-3 py-2 rounded-4 shadow-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#quoteModal"
+          data-product="Banana"
+        >
+          <i class="bi bi-bag"></i> Request Quote
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
       </div>
@@ -644,11 +1171,11 @@ Ideal for daily consumption to improve overall health and vitality.">
 </div>
 
 
-<!-- Product Details Modal --> 
+<!-- Product Details Modal -->
 <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
-
+      
       <!-- Modal Header -->
       <div class="modal-header">
         <h5 class="modal-title" id="detailsModalLabel">Product Details</h5>
@@ -657,29 +1184,23 @@ Ideal for daily consumption to improve overall health and vitality.">
 
       <!-- Modal Body -->
       <div class="modal-body">
-        <h4 id="detailsTitle"></h4>
+        <h4 id="detailsTitle" class="text-center mb-4"></h4>
 
-        <div class="row align-items-start">
-          <!-- Left column: Main + Additional Images -->
-          <div class="col-md-4 text-center mb-3 mb-md-0 ">
-            <!-- Main Image -->
-            <img id="mainImage" src="" class="rounded mb-3" style="width: 200px; height: auto;" alt="Main Product" />
-            
-            <!-- Additional Images -->
+        <div class="row">
+          <!-- Main + Thumbnails + Description -->
+          <div class="col-12 col-md-4 text-center mb-3 mb-md-0 order-1 order-md-1">
+            <img id="mainImage" src="" class="rounded mb-3 shadow-sm w-100" style="max-width: 250px; height: auto;" alt="Main Product" />
             <div class="d-flex gap-2 flex-wrap justify-content-center" id="additionalImages"></div>
           </div>
 
-          <!-- Right column: Description -->
-          <div class="col-md-8">
+          <div class="col-12 col-md-8 order-2 order-md-2 mt-3 mt-md-0">
             <p id="detailsDescription" class="mb-0"></p>
           </div>
         </div>
-      </div>
 
-      <!-- ✅ Modal Footer placed correctly -->
-      <!-- <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div> -->
+        <!-- Data Table Section -->
+        <div id="detailsDataTable" class="table-responsive mt-4 text-center"></div>
+      </div>
 
     </div>
   </div>
@@ -702,90 +1223,96 @@ Ideal for daily consumption to improve overall health and vitality.">
   </script>
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Init EmailJS
-    emailjs.init("7rQD69_7mW6b7hR_v"); // Replace with your public key
+  emailjs.init("7rQD69_7mW6b7hR_v");
 
-    // Set product name in modal
-    const quoteButtons = document.querySelectorAll(".request-quote-btn");
-    const productInput = document.getElementById("product_name");
+  const quoteButtons = document.querySelectorAll(".request-quote-btn");
+  const productInput = document.getElementById("product_name");
 
-    quoteButtons.forEach(button => {
-      button.addEventListener("click", function () {
-        const product = this.getAttribute("data-product");
-        productInput.value = product;
-      });
-    });
-
-    // Handle form submit
-    const form = document.getElementById("quoteForm");
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      emailjs.sendForm("service_4vh0zlm", "template_hqhhenl", this)
-        .then(() => {
-          alert("Quote request sent successfully!");
-          form.reset();
-          const modal = bootstrap.Modal.getInstance(document.getElementById("quoteModal"));
-          modal.hide();
-        }, (error) => {
-          alert("Failed to send request. Please try again.");
-          console.error(error);
-        });
+  quoteButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      const product = this.getAttribute("data-product");
+      productInput.value = product;
     });
   });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // For View Details
-    const viewButtons = document.querySelectorAll(".view-details-btn");
-    const detailsTitle = document.getElementById("detailsTitle");
-    const detailsDescription = document.getElementById("detailsDescription");
-    const mainImage = document.getElementById("mainImage");
-    const additionalImagesContainer = document.getElementById("additionalImages");
 
-    viewButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const title = button.getAttribute("data-title");
-        const description = button.getAttribute("data-description");
-        const mainImg = button.getAttribute("data-main-img");
-        const images = JSON.parse(button.getAttribute("data-images") || "[]");
+  const form = document.getElementById("quoteForm");
+  const loader = document.getElementById("loaderOverlay"); // Get loader element
 
-        detailsTitle.textContent = title;
-       detailsDescription.innerHTML = description.replace(/\n/g, "<br>");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        mainImage.src = mainImg;
+    loader.style.display = "flex"; // ✅ Show loader
 
-// Clear existing thumbnails
-additionalImagesContainer.innerHTML = "";
-
-// Add main image as the first thumbnail
-const mainThumbnail = document.createElement("img");
-mainThumbnail.src = mainImg;
-mainThumbnail.className = "img-thumbnail";
-mainThumbnail.style.width = "60px";
-mainThumbnail.style.height = "60px";
-mainThumbnail.style.objectFit = "cover";
-mainThumbnail.style.cursor = "pointer";
-additionalImagesContainer.appendChild(mainThumbnail);
-
-// Add the rest of the images (skip if duplicate of main)
-images.forEach(imgSrc => {
-  if (imgSrc !== mainImg) {
-    const img = document.createElement("img");
-    img.src = imgSrc;
-    img.className = "img-thumbnail";
-    img.style.width = "60px";
-    img.style.height = "60px";
-    img.style.objectFit = "cover";
-    img.style.cursor = "pointer";
-    additionalImagesContainer.appendChild(img);
-  }
+    emailjs.sendForm("service_4vh0zlm", "template_hqhhenl", this)
+      .then(() => {
+        loader.style.display = "none"; // ✅ Hide loader after success
+        alert("Quote request sent successfully!");
+        form.reset();
+        const modal = bootstrap.Modal.getInstance(document.getElementById("quoteModal"));
+        modal.hide();
+      }, (error) => {
+        loader.style.display = "none"; // ✅ Hide loader after error
+        alert("Failed to send request. Please try again.");
+        console.error(error);
+      });
+  });
 });
 
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const viewImages = document.querySelectorAll(".view-details-img");
+  const detailsTitle = document.getElementById("detailsTitle");
+  const detailsDescription = document.getElementById("detailsDescription");
+  const mainImage = document.getElementById("mainImage");
+  const additionalImagesContainer = document.getElementById("additionalImages");
+  const detailsDataTable = document.getElementById("detailsDataTable");
 
+  viewImages.forEach(img => {
+    img.addEventListener("click", () => {
+      const title = img.getAttribute("data-title");
+      const description = img.getAttribute("data-description");
+      const mainImg = img.getAttribute("data-main-img");
+      const images = JSON.parse(img.getAttribute("data-images") || "[]");
+      const tableHTML = img.getAttribute("data-table");
+
+      // Set modal content
+      detailsTitle.textContent = title;
+      detailsDescription.innerHTML = description.replace(/\n/g, "<br>");
+      mainImage.src = mainImg;
+      detailsDataTable.innerHTML = tableHTML || "";
+
+      // Clear existing thumbnails
+      additionalImagesContainer.innerHTML = "";
+
+      // Add main image as thumbnail
+      const mainThumb = document.createElement("img");
+      mainThumb.src = mainImg;
+      mainThumb.className = "img-thumbnail";
+      mainThumb.style.width = "60px";
+      mainThumb.style.height = "60px";
+      mainThumb.style.objectFit = "cover";
+      mainThumb.style.cursor = "pointer";
+      mainThumb.onclick = () => (mainImage.src = mainImg);
+      additionalImagesContainer.appendChild(mainThumb);
+
+      // Add other thumbnails
+      images.forEach(src => {
+        if (src !== mainImg) {
+          const thumb = document.createElement("img");
+          thumb.src = src;
+          thumb.className = "img-thumbnail";
+          thumb.style.width = "60px";
+          thumb.style.height = "60px";
+          thumb.style.objectFit = "cover";
+          thumb.style.cursor = "pointer";
+          thumb.onclick = () => (mainImage.src = src);
+          additionalImagesContainer.appendChild(thumb);
+        }
       });
     });
   });
+});
 </script>
 <script>
   // Add thumbnail click handler to update the main image
