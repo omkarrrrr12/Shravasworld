@@ -187,7 +187,7 @@ h1, h2 {
 }
 
 .hero-slide {
-  height: 50vh;
+  min-height: 60vh;
   padding: 60px 20px; /* reduced from 100px to 60px */
   position: relative;
   background-size: cover;
@@ -209,7 +209,7 @@ h1, h2 {
   position: absolute;
   top:0; left:0;
   width:100%; height:100%;
-  background-color: rgba(35, 35, 35, 0.51);
+  background-color: rgba(9, 9, 9, 0.51);
   z-index:1;
 }
 
@@ -227,15 +227,22 @@ h1, h2 {
   .hero-slide { min-height: 50vh; background-image: url('assets/about-480.png'); }
 }
 
+@media (max-width: 350px) {
+  .hero-slide { min-height: 60vh; background-image: url('assets/about-480.png'); }
+}
+
 /* Desktop background */
 .hero-slide { background-image: url('assets/about.png'); }
 
-.hero-slide:first-child {
-  min-height: 60vh; /* reduce height only for first slide to paint faster */
-}
+
 .hero-slide .container h3 {
-  color: #FFD700; /* gold */
+  color: #FFD700; /* solid gold color */
+  text-shadow: 
+    0 1px 0 #fff,       /* subtle top highlight */
+    0 2px 2px rgba(0,0,0,0.3), /* soft shadow below */
+    0 4px 6px rgba(0,0,0,0.2); /* deeper shadow for depth */
 }
+
 
 .hero-slide .container p {
   color: #ffffff; /* white */
