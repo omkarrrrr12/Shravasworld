@@ -1309,12 +1309,155 @@ h1, h2 {
 
 
 
+
+
+
+
   <div data-include="components/highlights.html"data-aos="fade-up"></div>
 
 
  <div data-include="components/testimonials.html"data-aos="fade-up"></div>
  
 <div data-include="about-preview.html"></div>
+
+<section class="global-reach-section py-4 text-center text-white"> 
+  <style>
+    /* Scoped styles specific to global-reach-section */
+    .global-reach-section {
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    /* .global-reach-section .gr-title {
+      font-weight: 700;
+      color: #fff;
+      text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.3),
+        0 0 10px rgba(255, 255, 255, 0.2);
+    } */
+
+    .global-reach-section .gr-lead {
+  color: #0e0b0b;
+  font-size: clamp(1rem, 2vw, 1.3rem); /* scales between 1rem and 1.3rem based on viewport width */
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+  line-height: 1.6;
+}
+
+
+    .global-reach-section .gr-image-container {
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 0rem;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .global-reach-section .gr-image-container img {
+      border-radius: 50%;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+      max-width: 180px; /* increased from 120px */
+      width: 100%;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .global-reach-section .gr-image-container:hover img {
+      transform: scale(1.1); /* increased hover scale */
+      filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.6));
+    }
+
+    .global-reach-section .gr-caption {
+      margin-top: 0.75rem;
+      font-weight: 600;
+
+      font-size: 1.1rem;
+      color: #121111;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Responsive flex grid */
+    .global-reach-section .gr-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem; /* slightly bigger gap for larger images */
+    }
+
+    .global-reach-section .gr-col {
+      flex: 0 1 140px; /* base size for small screens */
+    }
+
+    @media (min-width: 768px) {
+      .global-reach-section .gr-col {
+        flex: 0 1 160px; /* medium screens */
+      }
+    }
+
+    @media (min-width: 992px) {
+      .global-reach-section .gr-col {
+        flex: 0 1 210px; /* large screens */
+      }
+    }
+  </style>
+
+  <div class="container">
+    <h2 class="gr-title fw-bold mb-2">Our Global Reach</h2>
+    <p class="gr-lead mb-5">
+      With strategic sourcing in India and a robust logistics network, we export globally to markets in:
+    </p>
+
+    <div class="gr-row">
+
+
+        <div class="gr-col">
+        <div class="gr-image-container">
+          <img src="assets/global-middleeast.png" alt="Middle East">
+          <div class="gr-caption">Middle East</div>
+        </div>
+      </div>
+
+
+       <div class="gr-col">
+        <div class="gr-image-container">
+          <img src="assets/global-europe.png" alt="Europe">
+          <div class="gr-caption">Europe</div>
+        </div>
+      </div>
+
+
+      <div class="gr-col">
+        <div class="gr-image-container">
+          <img src="assets/global-sea.png" alt="Southeast Asia">
+          <div class="gr-caption">Southeast Asia</div>
+        </div>
+      </div>
+
+
+      <div class="gr-col">
+        <div class="gr-image-container">
+          <img src="assets/global-na.png" alt="North America">
+          <div class="gr-caption">North America</div>
+        </div>
+      </div>
+
+      <div class="gr-col">
+        <div class="gr-image-container">
+          <img src="assets/global-africa.png" alt="Africa">
+          <div class="gr-caption">Africa</div>
+        </div>
+      </div>
+
+     
+
+    <p class="gr-lead">
+   We oversee end-to-end supply chain management, ensuring all certifications, stringent quality standards, and timely deliveries are maintained across international markets.
+</p>
+
+
+      
+
+      
+    </div>
+  </div>
+</section>
  <div data-include="components/sticky-social.html"></div>
 
   <!-- Footer -->
