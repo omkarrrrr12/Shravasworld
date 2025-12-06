@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exporter Certificates</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font: ECZAR -->
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+body {
+  background-color: #fdf7e8;
+  font-family: "Eczar", serif;
+}
+
+ /* Header Box */
+    .header-box {
+      background: #fff4cc;
+      text-align: center;
+      border-radius: 20px;
+      font-weight: 600;
+      color: #6b3500;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      color: #0f3d24;
+      font-weight: 700;
+      margin-top: 50px;
+    }
+
+    /* Section Text */
+    .section-text {
+      text-align: center;
+      color: #333;
+      line-height: 1.6;
+      margin: 10px auto 40px;
+    }
+
+    .certificate-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: 0.3s ease;
+      height: 100%;
+    }
+
+    .certificate-card:hover {
+      border-color: #165f36;
+      transform: translateY(-6px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .certificate-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .certificate-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f3d24;
+    }
+
+    .certificate-text {
+      font-size: 1rem;
+      margin: 10px 0 20px;
+      color: #444;
+    }
+
+    .view-btn {
+      border: 2px solid #165f36;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      color: #165f36;
+      cursor: pointer;
+      transition: 0.3s ease;
+      background: none;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .view-btn:hover {
+      background: #165f36;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+<div data-include="components/navbar.html"></div>
+
+ <!-- Header -->
+  <div class="header-box text-center fw-bold my-4 p-4 p-md-5 w-100 w-md-75 w-lg-60 fs-1 fs-md-2 fs-lg-3">
+    Official Certifications for Global Trade Compliance
+  </div>
+
+  <!-- Section Title -->
+  <h2 class="section-title text-center my-3 fs-2 fs-md-3 fs-lg-4">
+    Authorized and Verified Documents
+  </h2>
+
+  <!-- Section Text -->
+  <p class="section-text text-center mx-auto fs-6 fs-md-5 fs-lg-4" style="max-width:800px;">
+    These certificates represent our eligibility for international export operations
+    and confirm that our business meets government regulations, safety standards,
+    and legal compliance requirements.
+  </p>
+
+
+<section class="container pb-5">
+  <div class="row g-4 justify-content-center">
+
+    <!-- GST -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="certificate-card">
+        <img src="/assets/images/certificates/gst.png" alt="GST">
+        <p class="certificate-name">GST Certificate</p>
+        <p class="certificate-text">
+         Official registration under the Goods and Services Tax (GST) system, proving legal compliance for tax purposes.
+        </p>
+        <a href="/assets/certificates/gst.pdf" target="_blank" class="view-btn">View Certificate</a>
+      </div>
+    </div>
+
+    <!-- IEC -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="certificate-card">
+        <img src="/assets/images/certificates/iec.png" alt="">
+        <p class="certificate-name">IEC Certificate</p>
+        <p class="certificate-text">
+           Import Export Code (IEC) issued by the DGFT, authorizing international trade operations.
+        </p>
+        <a href="/assets/certificates/iec.pdf" target="_blank" class="view-btn">View Certificate</a>
+      </div>
+    </div>
+
+    <!-- MSME -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="certificate-card">
+        <img src="/assets/images/certificates/udyami.png" alt="">
+        <p class="certificate-name">MSME/Udyam Certificate</p>
+        <p class="certificate-text">
+          Official registration as a Micro, Small, or Medium Enterprise, confirming business legitimacy and eligibility for government benefits.
+        </p>
+        <a href="/assets/certificates/udyamcertificate.pdf" target="_blank" class="view-btn">View Certificate</a>
+      </div>
+    </div>
+
+    <!-- FSSAI -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="certificate-card">
+        <img src="/assets/images/certificates/formg.png" alt="">
+        <p class="certificate-name">Maharashtra Shops and Establishments Certificate (Form G)</p>
+        <p class="certificate-text">
+          Certificate ensuring compliance with Maharashtra Shops and Establishments Act, regulating business operations and labor standards.
+        </p>
+        <a href="/assets/certificates/formg.pdf" target="_blank" class="view-btn">View Certificate</a>
+      </div>
+    </div>
+
+   
+
+  </div>
+</section>
+<!-- ✅ Footer -->
+  <div data-include="components/footer.html"></div>
+ <script src="js/include.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
