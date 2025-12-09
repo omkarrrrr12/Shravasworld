@@ -10,7 +10,8 @@
 
   <!-- Google Font: ECZAR -->
   <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+ <!-- ✅ AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <style>
 body {
   background-color: #fdf7e8;
@@ -100,30 +101,31 @@ body {
 <body>
   <!-- Navbar -->
 <div data-include="components/navbar.html"></div>
+<div data-include="components/sticky-social.html"></div>
 
  <!-- Header -->
-  <div class="header-box text-center fw-bold my-4 p-4 p-md-5 w-100 w-md-75 w-lg-60 fs-1 fs-md-2 fs-lg-3">
+  <div class="header-box text-center fw-bold my-4 p-4 p-md-5 w-100 w-md-75 w-lg-60 fs-1 fs-md-2 fs-lg-3" data-aos="fade-up" data-aos-duration="1000">
     Official Certifications for Global Trade Compliance
   </div>
 
   <!-- Section Title -->
-  <h2 class="section-title text-center my-3 fs-2 fs-md-3 fs-lg-4">
+  <h2 class="section-title text-center my-3 fs-2 fs-md-3 fs-lg-4"data-aos="fade-up" data-aos-duration="1000">
     Authorized and Verified Documents
   </h2>
 
   <!-- Section Text -->
-  <p class="section-text text-center mx-auto fs-6 fs-md-5 fs-lg-4" style="max-width:800px;">
+  <p class="section-text text-center mx-auto fs-6 fs-md-5 fs-lg-4" style="max-width:800px;"data-aos="fade-up" data-aos-duration="1000">
     These certificates represent our eligibility for international export operations
     and confirm that our business meets government regulations, safety standards,
     and legal compliance requirements.
   </p>
 
 
-<section class="container pb-5">
-  <div class="row g-4 justify-content-center">
+<section class="container pb-5"data-aos="fade-up" data-aos-duration="1000">
+  <div class="row g-4 justify-content-center"data-aos="fade-up" data-aos-duration="1000">
 
     <!-- GST -->
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4"data-aos="fade-up" data-aos-duration="1000">
       <div class="certificate-card">
         <img src="assets/images/certificates/gst.png" alt="GST">
         <p class="certificate-name">GST Certificate</p>
@@ -135,7 +137,7 @@ body {
     </div>
 
     <!-- IEC -->
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4"data-aos="fade-up" data-aos-duration="1000">
       <div class="certificate-card">
         <img src="assets/images/certificates/iec.png" alt="">
         <p class="certificate-name">IEC Certificate</p>
@@ -147,7 +149,7 @@ body {
     </div>
 
     <!-- MSME -->
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4"data-aos="fade-up" data-aos-duration="1000">
       <div class="certificate-card">
         <img src="assets/images/certificates/udyami.png" alt="">
         <p class="certificate-name">MSME/Udyam Certificate</p>
@@ -159,7 +161,7 @@ body {
     </div>
 
     <!-- FSSAI -->
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4"data-aos="fade-up" data-aos-duration="1000">
       <div class="certificate-card">
         <img src="assets/images/certificates/formg.png" alt="">
         <p class="certificate-name">Maharashtra Shops and Establishments Certificate (Form G)</p>
@@ -171,7 +173,7 @@ body {
     </div>
 
     <!-- FSSAI -->
-<div class="col-12 col-md-6 col-lg-4">
+<div class="col-12 col-md-6 col-lg-4"data-aos="fade-up" data-aos-duration="1000">
   <div class="certificate-card">
     <img src="assets/images/certificates/fssai.png" alt="FSSAI">
     <p class="certificate-name">FSSAI License</p>
@@ -189,6 +191,11 @@ body {
 </section>
 <!-- ✅ Footer -->
   <div data-include="components/footer.html"></div>
+  <!-- ✅ AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
  <script src="js/include.js"></script>
   <script src="js/main.js"></script>
 </body>
